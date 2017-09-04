@@ -1,1 +1,1 @@
-# playground-pure-css-image
+# playground-image-with-sass
