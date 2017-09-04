@@ -1,0 +1,1 @@
+# playground-pure-css-image
