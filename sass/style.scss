@@ -1,6 +1,13 @@
-$menu-height:100px;
-$menu-padding:40px;
-$button-height:40px;
+$main-nav-height:100px;
+$main-nav-padding:100px;
+$button-height:50px;
+$button-padding:$button-height/2-12px;
+//Small TODO list
+//make conversion of text size for button
+//change font and color of font
+//makePartials
+
+$menu-shift:$main-nav-padding;
 
 
 *{
@@ -8,52 +15,81 @@ $button-height:40px;
     margin:0;
     padding:0;
 }
-.menu__list__el{
-   display: inline-block; 
-   text-decoration: none;
-   padding:0px;
-   margin:5px;
-  
-}
-.menu__list__el__link{
-    text-decoration:none;
-    background-color: #080000;
-    padding:10px 35px;
-    margin:0px; 
-    width:100%;
-    height:100%; 
-    border:1px solid white;
-}
-
-.background-cross-text{
-    display:inline-block;
-    width:29%;
-    height:$menu-height;
-    background-color:#9B3131;
-    text-align: center;
-    line-height: $menu-height;
-   
-}
 
 
-.menu-control{
-    display:inline-block;
-    position: absolute;
-    right:50px;
-    bottom:0px;
-    transform:translateY(50%);
-    height:$button-height;
-    text-align: left;
 
-}
 .main-nav{
    
-    height:$menu-height;
-    padding-left:$menu-padding;
-    padding-right: $menu-padding;
-    background-color:#CE9943;
+    height:$main-nav-height;
+    padding-left:$main-nav-padding;
+    padding-right: $main-nav-padding;
+    
     color:#CFCACA;
     position: relative;
     margin-bottom:$button-height;
+    background: linear-gradient(to bottom,rgba(208, 87, 16, 0.40) 30%,hsla(39, 60%, 68%, 0.20) 30% ),   linear-gradient(to left,rgba(59, 53, 49, 0.40) 5%,hsla(30, 15%, 95%, 0.10) 5% ) #CE9943;
+    
+     background-size:  100% 10px,50px 100%;
+
+    .background-cross-text{
+        display:inline-block;
+        width:29%;
+        height:$main-nav-height;
+        background-color:#9B3131;
+        text-align: center;
+        line-height:$main-nav-height;
+       
+    }
+    
+    
+    .menu-control{
+        display:inline-block;
+       
+       
+        position: absolute;
+        right:$menu-shift;
+        bottom:0;
+        height:$button-height;
+        text-align: left;
+        transform:translateY(50%);
+
+        .menu-list{
+           
+            display: inline-block;
+            height:100%;
+            
+         
+            .menu-list__el{
+                display: inline-block;
+                text-decoration: none;
+                padding:0px;
+                margin: 0px 5px;
+                height:100%;
+
+                line-height: 100%;
+                vertical-align: middle;
+                
+                .menu-list__el__link{
+                   
+                    display:inline-block;
+                    text-decoration:none;
+                    background-color: #080000;
+                    padding:$button-padding 35px ;
+                    margin:0px; 
+                    width:10em;
+                    height:100%; 
+                    border:1px solid white;
+                    text-align: center;
+
+                   
+                }
+           
+               
+             }
+        }
+
+       
+     
+    }
 
 }
