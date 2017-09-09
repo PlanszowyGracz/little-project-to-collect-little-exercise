@@ -37,7 +37,7 @@ body, html{
     padding-right: $main-nav-padding;
     color:#CFCACA;
     position: relative;
-    margin-bottom:$button-height;
+    margin-bottom:$button-height/2+2px;
     background: linear-gradient(to bottom,rgba(208, 87, 16, 0.40) 30%,hsla(39, 60%, 68%, 0.20) 30% ),   linear-gradient(to left,rgba(59, 53, 49, 0.40) 5%,hsla(30, 15%, 95%, 0.10) 5% ) $color-secondary;
     background-size:  100% 10px,50px 100%;
 
@@ -157,9 +157,9 @@ body, html{
 .general-content{
     position: relative;
     width:85%;
-    height:70vh;
+    height:72vh;
     background-color: #6AA16A;
-    margin:10px;
+    margin:20px 10px 20px 10px;
     padding:10px;
     text-align: center;
 
