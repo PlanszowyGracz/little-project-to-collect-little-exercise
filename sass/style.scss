@@ -2,6 +2,9 @@ $main-nav-height:100px;
 $main-nav-padding:100px;
 $button-height:50px;
 $button-padding:$button-height/2-12px;
+$color-primary: #9B3131;
+$color-secondary:#CE9943;
+$shift-menu:180px;
 //Small TODO list
 //make conversion of text size for button
 //change font and color of font
@@ -16,6 +19,15 @@ $menu-shift:$main-nav-padding;
     padding:0;
 }
 
+body, html{
+    background-color: $color-primary;
+    height:100%;
+    width:100%;
+}
+
+.main-wrapper{
+    height:100%;
+}
 
 
 .main-nav{
@@ -23,19 +35,17 @@ $menu-shift:$main-nav-padding;
     height:$main-nav-height;
     padding-left:$main-nav-padding;
     padding-right: $main-nav-padding;
-    
     color:#CFCACA;
     position: relative;
     margin-bottom:$button-height;
-    background: linear-gradient(to bottom,rgba(208, 87, 16, 0.40) 30%,hsla(39, 60%, 68%, 0.20) 30% ),   linear-gradient(to left,rgba(59, 53, 49, 0.40) 5%,hsla(30, 15%, 95%, 0.10) 5% ) #CE9943;
-    
-     background-size:  100% 10px,50px 100%;
+    background: linear-gradient(to bottom,rgba(208, 87, 16, 0.40) 30%,hsla(39, 60%, 68%, 0.20) 30% ),   linear-gradient(to left,rgba(59, 53, 49, 0.40) 5%,hsla(30, 15%, 95%, 0.10) 5% ) $color-secondary;
+    background-size:  100% 10px,50px 100%;
 
     .background-cross-text{
         display:inline-block;
-        width:29%;
+        width:36%;
         height:$main-nav-height;
-        background-color:#9B3131;
+        background-color:$color-primary;
         text-align: center;
         line-height:$main-nav-height;
        
@@ -57,6 +67,7 @@ $menu-shift:$main-nav-padding;
            
             display: inline-block;
             height:100%;
+            list-style-type: none;
             
          
             .menu-list__el{
@@ -81,6 +92,7 @@ $menu-shift:$main-nav-padding;
                     border:1px solid white;
                     text-align: center;
 
+
                    
                 }
            
@@ -92,4 +104,75 @@ $menu-shift:$main-nav-padding;
      
     }
 
+}
+
+.container{
+
+    height: 100%;  
+    position:relative;
+}
+
+
+.small-nav{
+    display:inline-block;
+    position:absolute;
+    top:20px;
+    left:20px;
+    width:$shift-menu;
+    height: 60vh;
+    background-color:$color-secondary;
+    margin:0px;
+    padding:10px 20px 10px 20px;
+    border-radius:20px;
+    border:2px solid black;
+    text-align: center;
+   
+
+    .small-nav__list{
+    text-decoration: none;
+    list-style-type: none;
+
+        .small-nav__list__el{
+        text-decoration: none;
+
+
+            .small-nav__list__el__link{
+            text-decoration: none;
+            }
+        }
+
+
+    }
+}
+
+
+.general-content-container{
+
+    display: inline-block;
+    position:relative;
+    left:$shift-menu + 20px;
+   
+} 
+
+.general-content{
+    position: relative;
+    width:85%;
+    height:70vh;
+    background-color: #6AA16A;
+    margin:10px;
+    padding:10px;
+    text-align: center;
+
+}
+
+.image1{
+    position: absolute;
+    //vertical-align: middle;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width:100px;
+    height:100px;
+    border: 1px solid black;
+    border-radius:100px;
 }
