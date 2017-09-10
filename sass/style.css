@@ -14,13 +14,25 @@ body, html {
   height: 100%;
 }
 
+.button_link, .main-nav .menu-control .expended, .main-nav .menu-control .menu-list .menu-list__el .menu-list__el__link {
+  display: block;
+  text-decoration: none;
+  background-color: #080000;
+  padding: 38px 35px;
+  margin: 0px;
+  width: 10em;
+  height: 100%;
+  border: 1px solid white;
+  text-align: center;
+}
+
 .main-nav {
   height: 100px;
   padding-left: 100px;
   padding-right: 100px;
   color: #CFCACA;
   position: relative;
-  margin-bottom: 27px;
+  margin-bottom: 52px;
   background: linear-gradient(to bottom, rgba(208, 87, 16, 0.4) 30%, rgba(222, 188, 124, 0.2) 30%), linear-gradient(to left, rgba(59, 53, 49, 0.4) 5%, rgba(244, 242, 240, 0.1) 5%) #CE9943;
   background-size: 100% 10px,50px 100%;
 }
@@ -39,9 +51,13 @@ body, html {
   position: absolute;
   right: 100px;
   bottom: 0;
-  height: 50px;
+  height: 100px;
   text-align: left;
   transform: translateY(50%);
+}
+
+.main-nav .menu-control .expended {
+  display: none;
 }
 
 .main-nav .menu-control .menu-list {
@@ -57,19 +73,54 @@ body, html {
   margin: 0px 5px;
   height: 100%;
   line-height: 100%;
-  vertical-align: middle;
 }
 
-.main-nav .menu-control .menu-list .menu-list__el .menu-list__el__link {
-  display: inline-block;
-  text-decoration: none;
-  background-color: #080000;
-  padding: 13px 35px;
-  margin: 0px;
-  width: 10em;
-  height: 100%;
-  border: 1px solid white;
-  text-align: center;
+@media all and (max-width: 800px) {
+  .main-nav {
+    padding-left: 13%;
+    padding-right: 13%;
+    width: 100%;
+    margin-bottom: 102px;
+  }
+  .main-nav .background-cross-text {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .main-nav .menu-control {
+    left: 0;
+    height: auto;
+    transform: translateY(100%);
+    display: block;
+    z-index: 10;
+    width: 100%;
+  }
+  .main-nav .menu-control .expended {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .main-nav .menu-control .menu-list {
+    display: none;
+  }
+  .main-nav .menu-control:hover .menu-list {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .main-nav .menu-control:hover .menu-list:focus {
+    display: none;
+  }
+  .main-nav .menu-control:hover .menu-list .menu-list__el {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+  }
+  .main-nav .menu-control:hover .menu-list .menu-list__el .menu-list__el__link {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 .container {
@@ -77,7 +128,7 @@ body, html {
   position: relative;
 }
 
-.small-nav {
+.container .small-nav {
   display: inline-block;
   position: absolute;
   top: 20px;
@@ -93,24 +144,17 @@ body, html {
   overflow-x: hidden;
 }
 
-.small-nav::-webkit-scrollbar {
+.container .small-nav::-webkit-scrollbar {
   width: 8px;
 }
 
-.small-nav::-webkit-scrollbar-track {
-  background: cyan;
-  border-radius: 8px;
-  border: 1px solid black;
-}
-
-.small-nav::-webkit-scrollbar-thumb {
-  border-radius: 10px;
+.container .small-nav::-webkit-scrollbar-thumb {
   background-color: black;
   border: 1px solid white;
   width: 4px;
 }
 
-.small-nav .plus {
+.container .small-nav .plus {
   width: 35px;
   height: 35px;
   background: linear-gradient(to left, transparent 40%, black 40%, black 60%, transparent 60%) no-repeat 2px 2px, linear-gradient(to bottom, transparent 40%, black 40%, black 60%, transparent 60%) no-repeat 2px 2px;
@@ -118,22 +162,22 @@ body, html {
   display: none;
 }
 
-.small-nav .small-nav__list {
+.container .small-nav .small-nav__list {
   text-decoration: none;
   list-style-type: none;
   display: inline-block;
 }
 
-.small-nav .small-nav__list .small-nav__list__el {
+.container .small-nav .small-nav__list .small-nav__list__el {
   text-decoration: none;
 }
 
-.small-nav .small-nav__list .small-nav__list__el .small-nav__list__el__link {
+.container .small-nav .small-nav__list .small-nav__list__el .small-nav__list__el__link {
   text-decoration: none;
 }
 
 @media all and (max-width: 800px) {
-  .small-nav {
+  .container .small-nav {
     width: 37px;
     height: 37px;
     border-radius: 5px;
@@ -142,34 +186,34 @@ body, html {
     z-index: 5;
     overflow: hidden;
   }
-  .small-nav .plus {
+  .container .small-nav .plus {
     display: block;
   }
-  .small-nav .small-nav__list {
+  .container .small-nav .small-nav__list {
     display: none;
   }
-  .small-nav:hover {
+  .container .small-nav:hover {
     width: 98%;
     height: auto;
     overflow-y: auto;
     overflow-x: hidden;
   }
-  .small-nav:hover .small-nav__list {
+  .container .small-nav:hover .small-nav__list {
     display: block;
   }
-  .small-nav:hover .plus {
+  .container .small-nav:hover .plus {
     overflow-y: auto;
     overflow-x: hidden;
   }
 }
 
-.general-content-container {
+.container .general-content-container {
   display: inline-block;
   position: relative;
   left: 200px;
 }
 
-.general-content-container .general-content {
+.container .general-content-container .general-content {
   position: relative;
   width: 85%;
   height: 72vh;
@@ -179,7 +223,7 @@ body, html {
   text-align: center;
 }
 
-.general-content-container .general-content .image1 {
+.container .general-content-container .general-content .image1 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -191,15 +235,15 @@ body, html {
 }
 
 @media all and (max-width: 800px) {
-  .general-content-container {
+  .container .general-content-container {
     left: 0px;
   }
-  .general-content-container .general-content {
+  .container .general-content-container .general-content {
     box-sizing: border-box;
     width: 95%;
-    margin: 0 auto;
+    margin: 10px auto;
   }
-  .general-content-container .general-content p {
+  .container .general-content-container .general-content p {
     position: relative;
     top: 42px;
   }
