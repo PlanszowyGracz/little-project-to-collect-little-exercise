@@ -14,11 +14,11 @@ body, html {
   height: 100%;
 }
 
-.button_link, .main-nav .menu-control .expended, .main-nav .menu-control .menu-list .menu-list__el .menu-list__el__link {
+.button_link, .main-nav .menu-control .visualise-expand, .main-nav .menu-control .menu-list .menu-list__el .menu-list__el__link {
   display: block;
   text-decoration: none;
   background-color: #080000;
-  padding: 38px 35px;
+  padding: 13px 35px;
   margin: 0px;
   width: 10em;
   height: 100%;
@@ -32,7 +32,7 @@ body, html {
   padding-right: 100px;
   color: #CFCACA;
   position: relative;
-  margin-bottom: 52px;
+  margin-bottom: 27px;
   background: linear-gradient(to bottom, rgba(208, 87, 16, 0.4) 30%, rgba(222, 188, 124, 0.2) 30%), linear-gradient(to left, rgba(59, 53, 49, 0.4) 5%, rgba(244, 242, 240, 0.1) 5%) #CE9943;
   background-size: 100% 10px,50px 100%;
 }
@@ -51,12 +51,11 @@ body, html {
   position: absolute;
   right: 100px;
   bottom: 0;
-  height: 100px;
-  text-align: left;
+  height: 50px;
   transform: translateY(50%);
 }
 
-.main-nav .menu-control .expended {
+.main-nav .menu-control .visualise-expand {
   display: none;
 }
 
@@ -80,7 +79,7 @@ body, html {
     padding-left: 13%;
     padding-right: 13%;
     width: 100%;
-    margin-bottom: 102px;
+    margin-bottom: 52px;
   }
   .main-nav .background-cross-text {
     width: 100%;
@@ -94,32 +93,35 @@ body, html {
     z-index: 10;
     width: 100%;
   }
-  .main-nav .menu-control .expended {
-    display: block;
+  .main-nav .menu-control .expand {
     width: 80%;
     margin: 0 auto;
+    background-color: red;
   }
-  .main-nav .menu-control .menu-list {
+  .main-nav .menu-control .expand .visualise-expand {
+    display: block;
+    width: 100%;
+  }
+  .main-nav .menu-control .expand .menu-list {
     display: none;
   }
-  .main-nav .menu-control:hover .menu-list {
+  .main-nav .menu-control .expand:hover .menu-list {
     display: block;
+    position: relative;
+    z-index: 120;
     width: 100%;
     margin: 0;
     padding: 0;
   }
-  .main-nav .menu-control:hover .menu-list:focus {
-    display: none;
-  }
-  .main-nav .menu-control:hover .menu-list .menu-list__el {
+  .main-nav .menu-control .expand:hover .menu-list .menu-list__el {
     margin: 0;
     padding: 0;
     display: block;
     width: 100%;
   }
-  .main-nav .menu-control:hover .menu-list .menu-list__el .menu-list__el__link {
-    width: 80%;
-    margin: 0 auto;
+  .main-nav .menu-control .expand:hover .menu-list .menu-list__el .menu-list__el__link {
+    width: 100%;
+    display: block;
   }
 }
 

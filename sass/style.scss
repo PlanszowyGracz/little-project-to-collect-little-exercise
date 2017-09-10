@@ -1,6 +1,6 @@
 $main-nav-height:100px;
 $main-nav-padding:100px;
-$button-height:100px;
+$button-height:50px;
 $button-padding:$button-height/2-12px;
 
 $color-primary: #9B3131;
@@ -96,10 +96,10 @@ body, html{
         right:$menu-shift;
         bottom:0;
         height:$button-height;
-        text-align: left;
+       
         transform:translateY(50%);
 
-        .expended{
+        .visualise-expand{
             @extend .button_link;
             display:none;
         }
@@ -147,51 +147,57 @@ body, html{
         }  
         .menu-control{
             left:0;
-        
             height:auto;
-           
             transform:translateY(100%);
             display:block;
             z-index: 10;
             width:100%;
             
+           
+            .expand{
+                 width: 80%;
+                 margin:0 auto;
+                 background-color: red;
 
-            .expended{
-            
-                display:block;
-                width:80%;
-                margin:0 auto;
-                
-              
-              
-            }
-            .menu-list{
-                display:none;
-            
+                 .visualise-expand{
+                    
+                        display:block;
+                        width:100%;
+                      
+                    }
+                    .menu-list{
+                        display:none;
+                    
+                    }
             }
 
-            &:hover{
+           
+
+            .expand:hover{
                 .menu-list{
                     display:block;
+                    position: relative;
+                    z-index: 120;
                     width:100%;
                     margin:0;
                     padding:0;
                     
-                    &:focus{
-                        display:none;
-                    }
+                   
                    .menu-list__el{
                         margin:0;
                         padding:0;
                         display:block;
                         width:100%;
                         .menu-list__el__link{
-                            width:80%;
-                            margin:0 auto;
+                            width:100%;
+                            display:block;
                         }
                    }
                 }
             }
+
+
+
          }
 
 
