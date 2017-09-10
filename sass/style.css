@@ -86,15 +86,23 @@ body, html {
   height: 60vh;
   background-color: #CE9943;
   margin: 0px;
-  padding: 10px 20px 10px 20px;
   border-radius: 20px;
   border: 2px solid black;
   text-align: center;
 }
 
+.small-nav .plus {
+  width: 35px;
+  height: 35px;
+  background: linear-gradient(to left, transparent 40%, black 40%, black 60%, transparent 60%) no-repeat 2px 2px, linear-gradient(to bottom, transparent 40%, black 40%, black 60%, transparent 60%) no-repeat 2px 2px;
+  background-size: 30px 30px, 30px 30px;
+  display: none;
+}
+
 .small-nav .small-nav__list {
   text-decoration: none;
   list-style-type: none;
+  display: inline-block;
 }
 
 .small-nav .small-nav__list .small-nav__list__el {
@@ -105,13 +113,30 @@ body, html {
   text-decoration: none;
 }
 
+@media all and (max-width: 800px) {
+  .small-nav {
+    width: 37px;
+    height: 37px;
+    border-radius: 5px;
+    left: 5px;
+    top: 5px;
+    z-index: 5;
+  }
+  .small-nav .plus {
+    display: block;
+  }
+  .small-nav .small-nav__list {
+    display: none;
+  }
+}
+
 .general-content-container {
   display: inline-block;
   position: relative;
   left: 200px;
 }
 
-.general-content {
+.general-content-container .general-content {
   position: relative;
   width: 85%;
   height: 72vh;
@@ -121,7 +146,7 @@ body, html {
   text-align: center;
 }
 
-.image1 {
+.general-content-container .general-content .image1 {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -130,6 +155,21 @@ body, html {
   height: 100px;
   border: 1px solid black;
   border-radius: 100px;
+}
+
+@media all and (max-width: 800px) {
+  .general-content-container {
+    left: 0px;
+  }
+  .general-content-container .general-content {
+    box-sizing: border-box;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .general-content-container .general-content p {
+    position: relative;
+    top: 42px;
+  }
 }
  
 

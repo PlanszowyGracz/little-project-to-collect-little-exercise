@@ -2,13 +2,30 @@ $main-nav-height:100px;
 $main-nav-padding:100px;
 $button-height:50px;
 $button-padding:$button-height/2-12px;
+
 $color-primary: #9B3131;
 $color-secondary:#CE9943;
-$shift-menu:180px;
+$shift-main-menu:180px;
+$shift-side-menu-begin:20px;
+$shift-side-menu-begin-small:5px;
+$plus-size:35px;
+$side-menu-border:2px;
+$plus-size-div:35px+$side-menu-border;
+
+$small-screen:800px;
 //Small TODO list
 //make conversion of text size for button
 //change font and color of font
 //makePartials
+@function make-Smaller($x, $y){
+    @return $x - $y;
+  }
+
+@mixin shift-top-content(){
+    position:relative;
+    top:$plus-size-div+$shift-side-menu-begin-small;
+}
+
 
 $menu-shift:$main-nav-padding;
 
@@ -117,20 +134,33 @@ body, html{
     display:inline-block;
     position:absolute;
     top:20px;
-    left:20px;
-    width:$shift-menu;
+    left:$shift-side-menu-begin;
+    width:$shift-main-menu;
     height: 60vh;
     background-color:$color-secondary;
     margin:0px;
-    padding:10px 20px 10px 20px;
+   
     border-radius:20px;
-    border:2px solid black;
+    border:$side-menu-border solid black;
     text-align: center;
    
+    .plus{
+        width:$plus-size;
+        height:$plus-size;
+        background: linear-gradient(to left,transparent 40%,black 40%,black 60%,transparent 60%) no-repeat 2px 2px,linear-gradient(to bottom,transparent 40%,black 40%,black 60%,transparent 60%) no-repeat 2px 2px;
+        
+        background-size: make-Smaller($plus-size , 5px) make-Smaller($plus-size , 5px),make-Smaller($plus-size , 5px) make-Smaller($plus-size , 5px);
+        display:none;
+       
+       
+       
+    }
+
 
     .small-nav__list{
     text-decoration: none;
     list-style-type: none;
+    display:inline-block;
 
         .small-nav__list__el{
         text-decoration: none;
@@ -143,36 +173,81 @@ body, html{
 
 
     }
+
+    @media all and(max-width:$small-screen){
+        
+         
+             width:$plus-size-div;
+             height:$plus-size-div;
+             border-radius: 5px;
+             left:$shift-side-menu-begin-small;
+             top:$shift-side-menu-begin-small;
+             z-index: 5;
+             .plus{
+                 display:block;
+             }
+             .small-nav__list{
+                 display:none;
+         
+             }
+          
+        
+         
+     
+         }
 }
+
+
 
 
 .general-content-container{
 
     display: inline-block;
     position:relative;
-    left:$shift-menu + 20px;
+    left:$shift-main-menu + 20px;
+    .general-content{
+
+        position: relative;
+        width:85%;
+        height:72vh;
+        background-color: #6AA16A;
+        margin:20px 10px 20px 10px;
+        padding:10px;
+        text-align: center;
+
+        .image1{
+            position: absolute;
+            //vertical-align: middle;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            width:100px;
+            height:100px;
+            border: 1px solid black;
+            border-radius:100px;
+        }
+    
+    }
+
+    @media all and(max-width:$small-screen){
+        left:0px;
    
+        .general-content{
+            box-sizing: border-box;
+            width:95%;
+            margin:0 auto;
+            
+
+            p{
+               @include shift-top-content();
+            }
+        }
+    }
 } 
 
-.general-content{
-    position: relative;
-    width:85%;
-    height:72vh;
-    background-color: #6AA16A;
-    margin:20px 10px 20px 10px;
-    padding:10px;
-    text-align: center;
 
-}
 
-.image1{
-    position: absolute;
-    //vertical-align: middle;
-    top:50%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    width:100px;
-    height:100px;
-    border: 1px solid black;
-    border-radius:100px;
-}
+
+
+
+
