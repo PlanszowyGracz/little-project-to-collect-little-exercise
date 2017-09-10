@@ -86,9 +86,28 @@ body, html {
   height: 60vh;
   background-color: #CE9943;
   margin: 0px;
-  border-radius: 20px;
+  border-radius: 20px 0px 0px 20px;
   border: 2px solid black;
   text-align: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.small-nav::-webkit-scrollbar {
+  width: 8px;
+}
+
+.small-nav::-webkit-scrollbar-track {
+  background: cyan;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+.small-nav::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: black;
+  border: 1px solid white;
+  width: 4px;
 }
 
 .small-nav .plus {
@@ -121,12 +140,26 @@ body, html {
     left: 5px;
     top: 5px;
     z-index: 5;
+    overflow: hidden;
   }
   .small-nav .plus {
     display: block;
   }
   .small-nav .small-nav__list {
     display: none;
+  }
+  .small-nav:hover {
+    width: 98%;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .small-nav:hover .small-nav__list {
+    display: block;
+  }
+  .small-nav:hover .plus {
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 
