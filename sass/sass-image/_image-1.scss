@@ -1,0 +1,51 @@
+@import "../global";
+$color-face:#E0B274;
+
+@mixin ear($num){
+    content:"";
+    position: absolute;
+    width:15px;
+    height:30px;
+   
+    top:35%;
+    border-radius: 40px 40px 40px 40px;
+    background: black; 
+    border:5px solid $color-face;
+    @if $num<0{
+        left:67px;
+        transform: rotate(-30deg);
+        }
+    @else {
+        right:67px;
+        transform: rotate(30deg);  
+    }
+    
+    z-index: -5;
+   
+}
+
+.image-1{
+    
+    .face{
+        @include center_img(150px,200px);
+        background-color: $color-face;
+        border-radius: 0px 0px 80px 80px ;
+
+        background-image: radial-gradient(30px 30px at 45px 39%, black 20% , white 20%, white 40% ,transparent  40% ), radial-gradient(30px 30px at 105px 39%, black 20%, white 20%, white 40%, transparent  40% ),
+        radial-gradient(15px 2px at 45px 30%, rgba(201, 129, 74, 0.91) 100% , transparent  100% ), radial-gradient(15px 2px at 105px 30%, rgba(194, 129, 77, 0.91) 100%, transparent  100% ) ;
+
+        //z-index:10;
+  
+    }
+    .ear1{
+        @include ear(-10);
+    }
+
+    .ear2{
+         @include ear(10);
+    }
+   
+}
+
+
+

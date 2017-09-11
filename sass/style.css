@@ -310,22 +310,21 @@ a {
 .container .general-content-container .general-content {
   position: relative;
   width: 85%;
-  height: 72vh;
+  min-height: 72vh;
   background: linear-gradient(rgba(217, 119, 62, 0.58), rgba(217, 119, 62, 0.58)) #9B3131;
   margin: 20px 10px 20px 10px;
   padding: 10px;
   text-align: center;
 }
 
-.container .general-content-container .general-content .image1 {
+.container .general-content-container .general-content .center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
+  width: 300px;
+  height: 300px;
   border: 1px solid black;
-  border-radius: 100px;
 }
 
 @media all and (max-width: 800px) {
@@ -336,11 +335,85 @@ a {
     box-sizing: border-box;
     width: 95%;
     margin: 10px auto;
+    height: auto;
   }
   .container .general-content-container .general-content p {
     position: relative;
-    top: 42px;
+    top: 37px;
+    height: 2.5em;
+    overflow-x: scroll;
   }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  background-color: #9B3131;
+  height: 100%;
+  width: 100%;
+}
+
+.main-wrapper {
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5em;
+}
+
+p {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+a {
+  font-family: 'Varela Round', sans-serif;
+}
+
+.image-1 .face {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 200px;
+  background-color: #E0B274;
+  border-radius: 0px 0px 80px 80px;
+  background-image: radial-gradient(30px 30px at 45px 39%, black 20%, white 20%, white 40%, transparent 40%), radial-gradient(30px 30px at 105px 39%, black 20%, white 20%, white 40%, transparent 40%), radial-gradient(15px 2px at 45px 30%, rgba(201, 129, 74, 0.91) 100%, transparent 100%), radial-gradient(15px 2px at 105px 30%, rgba(194, 129, 77, 0.91) 100%, transparent 100%);
+}
+
+.image-1 .ear1 {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 30px;
+  top: 35%;
+  border-radius: 40px 40px 40px 40px;
+  background: black;
+  border: 5px solid #E0B274;
+  left: 67px;
+  transform: rotate(-30deg);
+  z-index: -5;
+}
+
+.image-1 .ear2 {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 30px;
+  top: 35%;
+  border-radius: 40px 40px 40px 40px;
+  background: black;
+  border: 5px solid #E0B274;
+  right: 67px;
+  transform: rotate(30deg);
+  z-index: -5;
 }
  
 

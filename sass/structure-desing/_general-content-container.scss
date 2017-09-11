@@ -141,23 +141,17 @@ $aling-content:20px;
     
                 position: relative;
                 width:85%;
-                height:72vh;
+                min-height:72vh;
                
                 background:linear-gradient(mix( $color-assistant, $color-to-make-mix ), mix( $color-assistant, $color-to-make-mix )) $color-primary  ;
                 margin:$aling-content 10px 20px 10px;
                 padding:10px;
                 text-align: center;
     
-                .image1{
-                    position: absolute;
-                    //vertical-align: middle;
-                    top:50%;
-                    left:50%;
-                    transform: translate(-50%,-50%);
-                    width:100px;
-                    height:100px;
+                .center{
+                    @include center_img(300px,300px);
                     border: 1px solid black;
-                    border-radius:100px;
+                   
                 }
             
             }
@@ -169,10 +163,14 @@ $aling-content:20px;
                     box-sizing: border-box;
                     width:95%;
                     margin:10px auto;
+                    height:auto;
                     
     
                     p{
                         @include shift-top-content();
+                        
+                        height:2.5em;
+                        overflow-x:scroll;
                     }
                 }
             }

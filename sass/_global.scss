@@ -22,7 +22,8 @@ $small-screen:800px;
 
 @mixin shift-top-content(){
     position:relative;
-    top:$plus-size-div+$shift-side-menu-begin-small;
+    //top:$plus-size-div+$shift-side-menu-begin-small;
+    top:$plus-size-div;
 }
 
 @mixin overflow-only-x(){
@@ -41,6 +42,25 @@ $small-screen:800px;
     transform: rotate(-45deg);
     background: linear-gradient(45deg, $color-secondary 10% ,transparent 10%)  $star-begin $star-begin, linear-gradient(45deg, transparent 90% , $color-assistant 90%) star-cal(1) star-cal(0) $color-primary;
     background-size: $size-star $size-star, $size-star $size-star;
+
+}
+
+@mixin center_img($width, $height)
+{
+
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    @if ($width>300 or $height>300) {
+        width:300px;
+        height:300px;
+    }   
+    @else {
+        width:$width;
+        height:$height;
+    }
+   
 
 }
 
@@ -63,9 +83,7 @@ body, html{
     height: auto;  
     width:100%;
     overflow: hidden;
-    &:before{
-         
-    }
+  
 }
 
 h1{
