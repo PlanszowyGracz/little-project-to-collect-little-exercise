@@ -1,0 +1,41 @@
+$color-primary: #9B3131;
+$color-secondary:#CE9943;
+$color-assistant:rgba(216, 110, 53, 0.96);
+
+$small-screen:800px;
+//Small TODO list
+//make conversion of text size for button
+//change font and color of font
+
+@function make-Smaller($x, $y){
+    @return $x - $y;
+  }
+
+@mixin shift-top-content(){
+    position:relative;
+    top:$plus-size-div+$shift-side-menu-begin-small;
+}
+
+@mixin overflow-only-x(){
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+body, html{
+    background-color: $color-primary;
+    height:100%;
+    width:100%;
+}
+
+
+
+.main-wrapper{
+    height:100%;
+}

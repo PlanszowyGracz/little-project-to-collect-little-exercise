@@ -14,6 +14,22 @@ body, html {
   height: 100%;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  background-color: #9B3131;
+  height: 100%;
+  width: 100%;
+}
+
+.main-wrapper {
+  height: 100%;
+}
+
 .button_link, .main-nav .menu-control .visualise-expand, .main-nav .menu-control .menu-list .menu-list__el .menu-list__el__link {
   display: block;
   text-decoration: none;
@@ -33,7 +49,7 @@ body, html {
   color: #CFCACA;
   position: relative;
   margin-bottom: 27px;
-  background: linear-gradient(to bottom, rgba(208, 87, 16, 0.4) 30%, rgba(222, 188, 124, 0.2) 30%), linear-gradient(to left, rgba(59, 53, 49, 0.4) 5%, rgba(244, 242, 240, 0.1) 5%) #CE9943;
+  background: linear-gradient(to bottom, rgba(216, 110, 53, 0.96) 30%, rgba(222, 188, 124, 0.2) 30%), linear-gradient(to left, rgba(59, 53, 49, 0.4) 5%, rgba(244, 242, 240, 0.1) 5%) #CE9943;
   background-size: 100% 10px,50px 100%;
 }
 
@@ -123,6 +139,22 @@ body, html {
     width: 100%;
     display: block;
   }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  background-color: #9B3131;
+  height: 100%;
+  width: 100%;
+}
+
+.main-wrapper {
+  height: 100%;
 }
 
 .container {
@@ -219,7 +251,7 @@ body, html {
   position: relative;
   width: 85%;
   height: 72vh;
-  background-color: #6AA16A;
+  background-color: rgba(216, 110, 53, 0.3);
   margin: 20px 10px 20px 10px;
   padding: 10px;
   text-align: center;

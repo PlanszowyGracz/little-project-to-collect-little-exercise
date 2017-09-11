@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  background-color: #9B3131;
+  height: 100%;
+  width: 100%;
+}
+
+.main-wrapper {
+  height: 100%;
+}
+
+.button_link, .main-nav .menu-control .visualise-expand, .main-nav .menu-control .menu-list .menu-list__el .menu-list__el__link {
+  display: block;
+  text-decoration: none;
+  background-color: #080000;
+  padding: 13px 35px;
+  margin: 0px;
+  width: 10em;
+  height: 100%;
+  border: 1px solid white;
+  text-align: center;
+}
+
+.main-nav {
+  height: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
+  color: #CFCACA;
+  position: relative;
+  margin-bottom: 27px;
+  background: linear-gradient(to bottom, rgba(216, 110, 53, 0.96) 30%, rgba(222, 188, 124, 0.2) 30%), linear-gradient(to left, rgba(59, 53, 49, 0.4) 5%, rgba(244, 242, 240, 0.1) 5%) #CE9943;
+  background-size: 100% 10px,50px 100%;
+}
+
+.main-nav .background-cross-text {
+  display: inline-block;
+  width: 36%;
+  height: 100px;
+  background-color: #9B3131;
+  text-align: center;
+  line-height: 100px;
+}
+
+.main-nav .menu-control {
+  display: inline-block;
+  position: absolute;
+  right: 100px;
+  bottom: 0;
+  height: 50px;
+  transform: translateY(50%);
+}
+
+.main-nav .menu-control .visualise-expand {
+  display: none;
+}
+
+.main-nav .menu-control .menu-list {
+  display: inline-block;
+  height: 100%;
+  list-style-type: none;
+}
+
+.main-nav .menu-control .menu-list .menu-list__el {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0px;
+  margin: 0px 5px;
+  height: 100%;
+  line-height: 100%;
+}
+
+@media all and (max-width: 800px) {
+  .main-nav {
+    padding-left: 13%;
+    padding-right: 13%;
+    width: 100%;
+    margin-bottom: 52px;
+  }
+  .main-nav .background-cross-text {
+    width: 100%;
+    margin: 0 auto;
+  }
+  .main-nav .menu-control {
+    left: 0;
+    height: auto;
+    transform: translateY(100%);
+    display: block;
+    z-index: 10;
+    width: 100%;
+  }
+  .main-nav .menu-control .expand {
+    width: 80%;
+    margin: 0 auto;
+    background-color: red;
+  }
+  .main-nav .menu-control .expand .visualise-expand {
+    display: block;
+    width: 100%;
+  }
+  .main-nav .menu-control .expand .menu-list {
+    display: none;
+  }
+  .main-nav .menu-control .expand:hover .menu-list {
+    display: block;
+    position: relative;
+    z-index: 120;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .main-nav .menu-control .expand:hover .menu-list .menu-list__el {
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+  }
+  .main-nav .menu-control .expand:hover .menu-list .menu-list__el .menu-list__el__link {
+    width: 100%;
+    display: block;
+  }
+}
+ 
+
+ /*# sourceMappingURL= main-nav.css.map */
