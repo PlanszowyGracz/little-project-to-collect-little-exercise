@@ -1,4 +1,4 @@
-@import "../global.scss";
+@import "../global";
 
 $shift-side-menu-begin:20px;
 $shift-side-menu-begin-small:5px;
@@ -19,7 +19,7 @@ $shift-side-menu:180px;
             left:$shift-side-menu-begin;
             width:$shift-side-menu;
             height: 60vh;
-            background-color:$color-secondary;
+            background-color:mix($color-secondary,$color-to-make-mix,75% );
             margin:0px;
         
             border-radius:20px 0px 0px 20px;
@@ -131,7 +131,7 @@ $shift-side-menu:180px;
                 position: relative;
                 width:85%;
                 height:72vh;
-                background-color:rgba( $color-assistant, .5 ) ;
+                background-color: mix( $color-assistant, $color-to-make-mix ) ;
                 margin:20px 10px 20px 10px;
                 padding:10px;
                 text-align: center;
