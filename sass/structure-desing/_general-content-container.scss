@@ -6,10 +6,11 @@ $plus-size:35px;
 $side-menu-border:2px;
 $plus-size-div:35px+$side-menu-border;
 $shift-side-menu:180px;
-$size-star:30px;
+$size-star:50px;
+$star-begin:$size-star+5px;
 
 @function star-cal($num){
-    @return if($num>0,50px + ($size-star/30)*4, 50px - ($size-star/30)*4);
+    @return if($num>0,$star-begin - $star-begin/20, $star-begin - $star-begin/5 );
 }
 
 
@@ -29,7 +30,7 @@ $size-star:30px;
              left: -100%;
              z-index: 0;
              transform: rotate(-45deg);
-             background: linear-gradient(45deg, white 10% ,transparent 10%)50px 50px, linear-gradient(45deg, transparent 90% ,white 90%) star-cal(1) star-cal(0) $color-primary;
+             background: linear-gradient(45deg, $color-secondary 10% ,transparent 10%)  $star-begin $star-begin, linear-gradient(45deg, transparent 90% , $color-assistant 90%) star-cal(1) star-cal(0) $color-primary;
              background-size: $size-star $size-star, $size-star $size-star;
        
         }

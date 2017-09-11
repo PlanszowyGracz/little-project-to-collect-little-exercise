@@ -172,8 +172,8 @@ body, html {
   left: -100%;
   z-index: 0;
   transform: rotate(-45deg);
-  background: linear-gradient(45deg, white 10%, transparent 10%) 50px 50px, linear-gradient(45deg, transparent 90%, white 90%) 54px 46px #9B3131;
-  background-size: 30px 30px, 30px 30px;
+  background: linear-gradient(45deg, #CE9943 10%, transparent 10%) 55px 55px, linear-gradient(45deg, transparent 90%, rgba(216, 110, 53, 0.96) 90%) 52.25px 44px #9B3131;
+  background-size: 50px 50px, 50px 50px;
 }
 
 .container .small-nav {
