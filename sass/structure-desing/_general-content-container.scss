@@ -19,9 +19,11 @@ $shift-side-menu:180px;
             left:$shift-side-menu-begin;
             width:$shift-side-menu;
             height: 60vh;
-            background-color:mix($color-secondary,$color-to-make-mix,75% );
-            margin:0px;
-        
+           // background-color: $color-secondary;
+             background-color:mix($color-secondary,mix($color-to-make-mix-2 ,$color-to-make-mix), 95% );
+           // background: linear-gradient(to bottom, $color-to-make-mix, $color-to-make-mix),  linear-gradient(to bottom, $color-to-make-mix-2, $color-to-make-mix-2) $color-secondary;
+           // background-size:  100% 10px, 100% 10px;
+             margin:0px;
             border-radius:20px 0px 0px 20px;
             border:$side-menu-border solid black;
             text-align: center;
