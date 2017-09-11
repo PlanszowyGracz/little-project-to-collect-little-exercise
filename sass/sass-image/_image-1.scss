@@ -28,7 +28,7 @@ $color-hair:rgba(155, 76, 39, 1);
 
     .hair{
         position: absolute;
-        top:20px;
+        top:0px;
         left:50px;
         z-index: 5;
         width:200px;
@@ -49,6 +49,7 @@ $color-hair:rgba(155, 76, 39, 1);
     
     .face{
         @include center_img(150px,180px);
+        transform: translate(-50%,-110px);
         background-color: $color-face;
         border-radius: 10px 10px 80px 80px ;
 

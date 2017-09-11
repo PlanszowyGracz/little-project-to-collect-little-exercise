@@ -419,7 +419,7 @@ a {
 
 .image-1 .hair {
   position: absolute;
-  top: 20px;
+  top: 0px;
   left: 50px;
   z-index: 5;
   width: 200px;
@@ -434,6 +434,7 @@ a {
   transform: translate(-50%, -50%);
   width: 150px;
   height: 180px;
+  transform: translate(-50%, -110px);
   background-color: #E0B274;
   border-radius: 10px 10px 80px 80px;
   background-image: radial-gradient(30px 30px at 45px 30%, black 10%, #512B8D 10%, #2C0569 20%, white 20%, white 40%, transparent 40%), radial-gradient(30px 30px at 105px 30%, black 10%, #512B8D 10%, #2C0569 20%, white 20%, white 40%, transparent 40%), radial-gradient(ellipse 15px 2px at 45px 20%, rgba(201, 129, 74, 0.91) 100%, transparent 100%), radial-gradient(15px 2px at 105px 20%, rgba(194, 129, 77, 0.91) 100%, transparent 100%), radial-gradient(ellipse 50px 50px at 50% 50%, #E0B274 100%, transparent 100%), radial-gradient(40px 40px at 50% 60%, #C01F1F 100%, transparent 100%);
