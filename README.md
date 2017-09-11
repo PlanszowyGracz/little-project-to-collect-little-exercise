@@ -1,1 +1,1 @@
-# testing-sass
+# little-project-with-sass
