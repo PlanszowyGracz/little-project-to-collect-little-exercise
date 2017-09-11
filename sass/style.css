@@ -158,8 +158,22 @@ body, html {
 }
 
 .container {
-  height: 100%;
+  height: auto;
   position: relative;
+  overflow: hidden;
+}
+
+.container:before {
+  content: "";
+  position: absolute;
+  width: 400%;
+  height: 400%;
+  top: -100%;
+  left: -100%;
+  z-index: 0;
+  transform: rotate(-45deg);
+  background: linear-gradient(45deg, white 10%, transparent 10%) 50px 50px, linear-gradient(45deg, transparent 90%, white 90%) 54px 46px #9B3131;
+  background-size: 30px 30px, 30px 30px;
 }
 
 .container .small-nav {
@@ -169,7 +183,7 @@ body, html {
   left: 20px;
   width: 180px;
   height: 60vh;
-  background-color: rgba(206, 153, 67, 0.9575);
+  background-color: #CE9943;
   margin: 0px;
   border-radius: 20px 0px 0px 20px;
   border: 2px solid black;
@@ -251,7 +265,7 @@ body, html {
   position: relative;
   width: 85%;
   height: 72vh;
-  background-color: rgba(217, 119, 62, 0.58);
+  background: linear-gradient(rgba(217, 119, 62, 0.58), rgba(217, 119, 62, 0.58)) #9B3131;
   margin: 20px 10px 20px 10px;
   padding: 10px;
   text-align: center;
