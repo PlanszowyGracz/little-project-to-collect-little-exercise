@@ -16,6 +16,16 @@ body, html {
   overflow: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.39);
+  width: 4px;
+}
+
 h1 {
   font-family: 'Oswald', sans-serif;
   font-size: 2.5em;
@@ -45,6 +55,16 @@ body, html {
   height: auto;
   width: 100%;
   overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.39);
+  width: 4px;
 }
 
 h1 {
@@ -154,7 +174,7 @@ a {
   .main-nav .menu-control .expand:hover .menu-list {
     display: block;
     position: relative;
-    z-index: 120;
+    z-index: 200;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -187,6 +207,16 @@ body, html {
   height: auto;
   width: 100%;
   overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.39);
+  width: 4px;
 }
 
 h1 {
@@ -276,7 +306,7 @@ a {
     height: 37px;
     border-radius: 5px;
     left: 5px;
-    top: 32px;
+    top: 27px;
     z-index: 5;
     overflow: hidden;
   }
@@ -335,13 +365,14 @@ a {
     box-sizing: border-box;
     width: 95%;
     margin: 10px auto;
-    height: auto;
+    height: 85vh;
   }
   .container .general-content-container .general-content p {
     position: relative;
     top: 37px;
     height: 2.5em;
-    overflow-x: scroll;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 
@@ -363,6 +394,16 @@ body, html {
   overflow: hidden;
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.39);
+  width: 4px;
+}
+
 h1 {
   font-family: 'Oswald', sans-serif;
   font-size: 2.5em;
@@ -376,16 +417,37 @@ a {
   font-family: 'Varela Round', sans-serif;
 }
 
+.image-1 .hair {
+  position: absolute;
+  top: 20px;
+  left: 60px;
+  z-index: 5;
+  width: 180px;
+  height: 80px;
+  background-image: radial-gradient(20px 20px at 50% 50%, #9b4c27 100%, transparent 100%), radial-gradient(20px 20px at 10% 60%, #9b4c27 100%, transparent 100%), radial-gradient(20px 20px at 55% 46%, #9b4c27 100%, transparent 100%), radial-gradient(27px 27px at 40% 41%, #9b4c27 100%, transparent 100%), radial-gradient(19px 19px at 33% 46%, #9b4c27 100%, transparent 100%), radial-gradient(24px 24px at 25% 46%, #9b4c27 100%, transparent 100%), radial-gradient(25px 25px at 67% 43%, #9b4c27 100%, transparent 100%), radial-gradient(24px 24px at 73% 48%, #9b4c27 100%, transparent 100%), radial-gradient(20px 20px at 90% 60%, #9b4c27 100%, transparent 100%);
+}
+
 .image-1 .face {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 150px;
-  height: 200px;
+  height: 180px;
   background-color: #E0B274;
-  border-radius: 0px 0px 80px 80px;
-  background-image: radial-gradient(30px 30px at 45px 39%, black 20%, white 20%, white 40%, transparent 40%), radial-gradient(30px 30px at 105px 39%, black 20%, white 20%, white 40%, transparent 40%), radial-gradient(15px 2px at 45px 30%, rgba(201, 129, 74, 0.91) 100%, transparent 100%), radial-gradient(15px 2px at 105px 30%, rgba(194, 129, 77, 0.91) 100%, transparent 100%);
+  border-radius: 10px 10px 80px 80px;
+  background-image: radial-gradient(30px 30px at 45px 30%, black 20%, white 20%, white 40%, transparent 40%), radial-gradient(30px 30px at 105px 30%, black 20%, white 20%, white 40%, transparent 40%), radial-gradient(ellipse 15px 2px at 45px 20%, rgba(201, 129, 74, 0.91) 100%, transparent 100%), radial-gradient(15px 2px at 105px 20%, rgba(194, 129, 77, 0.91) 100%, transparent 100%), radial-gradient(ellipse 50px 50px at 50% 50%, #E0B274 100%, transparent 100%), radial-gradient(40px 40px at 50% 60%, #C01F1F 100%, transparent 100%);
+}
+
+.image-1 .face .nose {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 20px;
+  background-image: linear-gradient(to bottom, #b78548 30%, #b78548);
+  border-radius: 10px 10px 40px 40px;
 }
 
 .image-1 .ear1 {

@@ -42,11 +42,11 @@ $aling-content:20px;
                 width: 8px;
             }
             
-        &::-webkit-scrollbar-thumb {
-                background-color: black;
-                border:1px solid white;
-                width: 4px;
-            
+            &::-webkit-scrollbar-thumb {
+                    background-color: black;
+                    border:1px solid white;
+                    width: 4px;
+                
             }
         
             .plus{
@@ -92,7 +92,7 @@ $aling-content:20px;
                     height:$plus-size-div;
                     border-radius: 5px;
                     left:$shift-side-menu-begin-small;
-                    top:$shift-side-menu-begin-small+ $shift-container-vertical;
+                    top: $shift-container-vertical;
                     z-index: 5;
                     overflow: hidden;
                     .plus{
@@ -163,14 +163,14 @@ $aling-content:20px;
                     box-sizing: border-box;
                     width:95%;
                     margin:10px auto;
-                    height:auto;
+                    height:85vh;
                     
     
                     p{
                         @include shift-top-content();
                         
                         height:2.5em;
-                        overflow-x:scroll;
+                        @include overflow-only-x();
                     }
                 }
             }
