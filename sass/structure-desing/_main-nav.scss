@@ -2,7 +2,7 @@
 
 $main-nav-height:100px;
 $main-nav-padding-sides:100px;
-$button-height:50px;
+$button-height:$button-height-universal;
 $button-padding:$button-height/2-12px;
 
 $main-menu-shift:$main-nav-padding-sides;
@@ -32,10 +32,11 @@ $main-menu-shift:$main-nav-padding-sides;
     padding-right: $main-nav-padding-sides;
     color:#CFCACA;
     position: relative;
-    margin-bottom:$button-height/2+2px;
+    
     background: linear-gradient(to bottom,$color-assistant 30%,$color-to-make-mix 30% ),   linear-gradient(to left,rgba(59, 53, 49, 0.40) 5%,$color-to-make-mix-2 5% ) $color-secondary;
     background-size:  100% 10px,50px 100%;
-
+    
+    
     .background-cross-text{
         display:inline-block;
         width:36%;
@@ -43,6 +44,7 @@ $main-menu-shift:$main-nav-padding-sides;
         background-color:$color-primary;
         text-align: center;
         line-height:$main-nav-height;
+       
     }
     
     
@@ -53,6 +55,7 @@ $main-menu-shift:$main-nav-padding-sides;
         bottom:0;
         height:$button-height;
         transform:translateY(50%);
+        z-index: 100;
 
         .visualise-expand{
             @extend .button_link;
@@ -106,7 +109,7 @@ $main-menu-shift:$main-nav-padding-sides;
             
            
             .expand{
-                 width: 80%;
+                 width: 98%;
                  margin:0 auto;
                  background-color: red;
 

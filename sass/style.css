@@ -11,7 +11,22 @@ body, html {
 }
 
 .main-wrapper {
-  height: 100%;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5em;
+}
+
+p {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+a {
+  font-family: 'Varela Round', sans-serif;
 }
 
 * {
@@ -27,7 +42,22 @@ body, html {
 }
 
 .main-wrapper {
-  height: 100%;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5em;
+}
+
+p {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+a {
+  font-family: 'Varela Round', sans-serif;
 }
 
 .button_link, .main-nav .menu-control .visualise-expand, .main-nav .menu-control .menu-list .menu-list__el .menu-list__el__link {
@@ -48,7 +78,6 @@ body, html {
   padding-right: 100px;
   color: #CFCACA;
   position: relative;
-  margin-bottom: 27px;
   background: linear-gradient(to bottom, rgba(216, 110, 53, 0.96) 30%, rgba(222, 188, 124, 0.2) 30%), linear-gradient(to left, rgba(59, 53, 49, 0.4) 5%, rgba(244, 242, 240, 0.1) 5%) #CE9943;
   background-size: 100% 10px,50px 100%;
 }
@@ -69,6 +98,7 @@ body, html {
   bottom: 0;
   height: 50px;
   transform: translateY(50%);
+  z-index: 100;
 }
 
 .main-nav .menu-control .visualise-expand {
@@ -110,7 +140,7 @@ body, html {
     width: 100%;
   }
   .main-nav .menu-control .expand {
-    width: 80%;
+    width: 98%;
     margin: 0 auto;
     background-color: red;
   }
@@ -154,32 +184,48 @@ body, html {
 }
 
 .main-wrapper {
-  height: 100%;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5em;
+}
+
+p {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+a {
+  font-family: 'Varela Round', sans-serif;
 }
 
 .container {
   height: auto;
   position: relative;
   overflow: hidden;
+  padding-top: 27px;
 }
 
 .container:before {
   content: "";
   position: absolute;
-  width: 400%;
-  height: 400%;
-  top: -100%;
-  left: -100%;
+  width: 800%;
+  height: 800%;
+  top: -400%;
+  left: -400%;
   z-index: 0;
   transform: rotate(-45deg);
-  background: linear-gradient(45deg, #CE9943 10%, transparent 10%) 55px 55px, linear-gradient(45deg, transparent 90%, rgba(216, 110, 53, 0.96) 90%) 52.25px 44px #9B3131;
-  background-size: 50px 50px, 50px 50px;
+  background: linear-gradient(45deg, #CE9943 10%, transparent 10%) 32px 32px, linear-gradient(45deg, transparent 90%, rgba(216, 110, 53, 0.96) 90%) 30.4px 25.6px #9B3131;
+  background-size: 30px 30px, 30px 30px;
 }
 
 .container .small-nav {
   display: inline-block;
   position: absolute;
-  top: 20px;
+  top: 47px;
   left: 20px;
   width: 180px;
   height: 60vh;
@@ -230,7 +276,7 @@ body, html {
     height: 37px;
     border-radius: 5px;
     left: 5px;
-    top: 5px;
+    top: 32px;
     z-index: 5;
     overflow: hidden;
   }

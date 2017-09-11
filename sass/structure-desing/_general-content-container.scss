@@ -6,12 +6,8 @@ $plus-size:35px;
 $side-menu-border:2px;
 $plus-size-div:35px+$side-menu-border;
 $shift-side-menu:180px;
-$size-star:50px;
-$star-begin:$size-star+5px;
-
-@function star-cal($num){
-    @return if($num>0,$star-begin - $star-begin/20, $star-begin - $star-begin/5 );
-}
+$shift-container-vertical:$button-height-universal/2+2px;
+$aling-content:20px;
 
 
 
@@ -20,25 +16,15 @@ $star-begin:$size-star+5px;
         height: auto;  
         position:relative;
         overflow: hidden;
+        padding-top:$shift-container-vertical;
         &:before{
-             content:"";
-             position: absolute;
-             
-             width: 400%;
-             height: 400%;
-             top: -100%;
-             left: -100%;
-             z-index: 0;
-             transform: rotate(-45deg);
-             background: linear-gradient(45deg, $color-secondary 10% ,transparent 10%)  $star-begin $star-begin, linear-gradient(45deg, transparent 90% , $color-assistant 90%) star-cal(1) star-cal(0) $color-primary;
-             background-size: $size-star $size-star, $size-star $size-star;
-       
+            @include background-triangle();
         }
     
         .small-nav{
             display:inline-block;
             position:absolute;
-            top:20px;
+            top: $shift-container-vertical+$aling-content;
             left:$shift-side-menu-begin;
             width:$shift-side-menu;
             height: 60vh;
@@ -106,7 +92,7 @@ $star-begin:$size-star+5px;
                     height:$plus-size-div;
                     border-radius: 5px;
                     left:$shift-side-menu-begin-small;
-                    top:$shift-side-menu-begin-small;
+                    top:$shift-side-menu-begin-small+ $shift-container-vertical;
                     z-index: 5;
                     overflow: hidden;
                     .plus{
@@ -158,7 +144,7 @@ $star-begin:$size-star+5px;
                 height:72vh;
                
                 background:linear-gradient(mix( $color-assistant, $color-to-make-mix ), mix( $color-assistant, $color-to-make-mix )) $color-primary  ;
-                margin:20px 10px 20px 10px;
+                margin:$aling-content 10px 20px 10px;
                 padding:10px;
                 text-align: center;
     

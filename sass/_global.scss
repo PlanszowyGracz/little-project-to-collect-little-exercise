@@ -3,11 +3,18 @@ $color-secondary:#CE9943;
 $color-assistant:rgba(216, 110, 53, 0.96);
 $color-to-make-mix:hsla(39, 60%, 68%, 0.20);
 $color-to-make-mix-2:hsla(30, 15%, 95%, 0.10);
-
+$size-star:30px;
+$star-begin:$size-star+2px;
+$button-height-universal:50px;
 $small-screen:800px;
 //Small TODO list
 //make conversion of text size for button
 //change font and color of font
+
+
+@function star-cal($num){
+    @return if($num>0,$star-begin - $star-begin/20, $star-begin - $star-begin/5 );
+}
 
 @function make-Smaller($x, $y){
     @return $x - $y;
@@ -21,6 +28,20 @@ $small-screen:800px;
 @mixin overflow-only-x(){
     overflow-y: auto;
     overflow-x: hidden;
+}
+
+@mixin background-triangle(){
+    content:"";
+    position: absolute;
+    width: 800%;
+    height: 800%;
+    top: -400%;
+    left: -400%;
+    z-index: 0;
+    transform: rotate(-45deg);
+    background: linear-gradient(45deg, $color-secondary 10% ,transparent 10%)  $star-begin $star-begin, linear-gradient(45deg, transparent 90% , $color-assistant 90%) star-cal(1) star-cal(0) $color-primary;
+    background-size: $size-star $size-star, $size-star $size-star;
+
 }
 
 
@@ -39,5 +60,23 @@ body, html{
 
 
 .main-wrapper{
-    height:100%;
+    height: auto;  
+    width:100%;
+    overflow: hidden;
+    &:before{
+         
+    }
+}
+
+h1{
+    font-family: 'Oswald', sans-serif;
+    font-size: 2.5em;
+}
+
+p{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+a{
+    font-family: 'Varela Round', sans-serif; 
 }
