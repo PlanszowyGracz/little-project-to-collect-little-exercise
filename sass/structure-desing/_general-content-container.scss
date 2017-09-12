@@ -105,8 +105,8 @@ $aling-content:20px;
                 
                     }
     
-                    &:hover{
-                        width:98%;
+                    &:not(.no-hover):hover{
+                        width:96%;
                         height:auto;
                         @include overflow-only-x();
                         

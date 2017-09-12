@@ -316,16 +316,16 @@ a {
   .container .small-nav .small-nav__list {
     display: none;
   }
-  .container .small-nav:hover {
-    width: 98%;
+  .container .small-nav:not(.no-hover):hover {
+    width: 96%;
     height: auto;
     overflow-y: auto;
     overflow-x: hidden;
   }
-  .container .small-nav:hover .small-nav__list {
+  .container .small-nav:not(.no-hover):hover .small-nav__list {
     display: block;
   }
-  .container .small-nav:hover .plus {
+  .container .small-nav:not(.no-hover):hover .plus {
     overflow-y: auto;
     overflow-x: hidden;
   }
