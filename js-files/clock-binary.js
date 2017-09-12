@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded",function(){
 	let now = new Date();
 	let h = now.getHours();
 	let m = now.getMinutes();
-	console.log("time: "+ h + " " + m + " " + converseToBinary(4).join(""));
+	console.log("time: "+ h + " " + m + " ");
 	testConversion();
 
 	
@@ -17,7 +17,7 @@ function converseToBinary(num){
 	while(number>=1	){
 		arr.push(number%2);
 		number=Math.floor(number/2);
-		console.log(" hmm" + number%2 + " " +number/2);
+		
 	}
 	if(arr.length===0) arr.push(0);
 	
