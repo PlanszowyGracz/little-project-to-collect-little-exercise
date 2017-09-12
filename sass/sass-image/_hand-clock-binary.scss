@@ -1,0 +1,8 @@
+@import "../global";
+.clock-binary-hand{
+    .main-clock{
+        background-color: silver;
+        @include center-img(150px,100px);
+    }
+
+}

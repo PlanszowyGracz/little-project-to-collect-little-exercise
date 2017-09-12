@@ -149,8 +149,9 @@ $aling-content:20px;
                 text-align: center;
     
                 .center{
-                    @include center_img(300px,300px);
-                    border: 1px solid black;
+                    @include center_img(350px,450px);
+                    border: 1px solid silver;
+               
                    
                 }
             
