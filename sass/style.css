@@ -449,7 +449,7 @@ a {
   z-index: 5;
   width: 200px;
   height: 80px;
-  background-image: radial-gradient(20px 20px at 50% 50%, #9b4c27 100%, transparent 100%), radial-gradient(20px 20px at 16% 60%, #9b4c27 100%, transparent 100%), radial-gradient(20px 20px at 55% 46%, #9b4c27 100%, transparent 100%), radial-gradient(27px 27px at 40% 41%, #9b4c27 100%, transparent 100%), radial-gradient(19px 19px at 33% 46%, #9b4c27 100%, transparent 100%), radial-gradient(24px 24px at 25% 46%, #9b4c27 100%, transparent 100%), radial-gradient(25px 25px at 67% 43%, #9b4c27 100%, transparent 100%), radial-gradient(24px 24px at 73% 48%, #9b4c27 100%, transparent 100%), radial-gradient(20px 20px at 84% 60%, #9b4c27 100%, transparent 100%);
+  background-image: radial-gradient(20px 20px at 50% 50%, #9b4c27 99%, transparent 99%), radial-gradient(20px 20px at 16% 60%, #9b4c27 98%, transparent 99%), radial-gradient(20px 20px at 55% 46%, #9b4c27 99%, transparent 99%), radial-gradient(27px 27px at 40% 41%, #9b4c27 99%, transparent 99%), radial-gradient(19px 19px at 33% 46%, #9b4c27 99%, transparent 99%), radial-gradient(24px 24px at 25% 46%, #9b4c27 99%, transparent 99%), radial-gradient(25px 25px at 67% 43%, #9b4c27 99%, transparent 99%), radial-gradient(24px 24px at 73% 48%, #9b4c27 99%, transparent 99%), radial-gradient(20px 20px at 84% 60%, #9b4c27 99%, transparent 99%);
 }
 
 .pseudo-portret-auto .face {
@@ -462,7 +462,7 @@ a {
   transform: translate(-50%, -110px);
   background-color: #E0B274;
   border-radius: 10px 10px 80px 80px;
-  background-image: radial-gradient(30px 30px at 45px 30%, black 10%, #512B8D 10%, #2C0569 20%, white 20%, white 40%, transparent 40%), radial-gradient(30px 30px at 105px 30%, black 10%, #512B8D 10%, #2C0569 20%, white 20%, white 40%, transparent 40%), radial-gradient(ellipse 15px 2px at 45px 20%, rgba(201, 129, 74, 0.91) 100%, transparent 100%), radial-gradient(15px 2px at 105px 20%, rgba(194, 129, 77, 0.91) 100%, transparent 100%), radial-gradient(ellipse 50px 50px at 50% 50%, #E0B274 100%, transparent 100%), radial-gradient(40px 40px at 50% 60%, #C01F1F 100%, transparent 100%);
+  background-image: radial-gradient(30px 30px at 45px 30%, black 10%, #512B8D 10%, #2C0569 20%, white 20%, white 40%, transparent 40%), radial-gradient(30px 30px at 105px 30%, black 10%, #512B8D 10%, #2C0569 20%, white 20%, white 40%, transparent 40%), radial-gradient(ellipse 15px 2px at 45px 20%, rgba(201, 129, 74, 0.91) 99%, transparent 99%), radial-gradient(15px 2px at 105px 20%, rgba(194, 129, 77, 0.91) 99%, transparent 99%), radial-gradient(50px 50px at 50% 50%, #E0B274 99%, transparent 99%), radial-gradient(40px 40px at 50% 60%, #C01F1F 99%, transparent 99%);
 }
 
 .pseudo-portret-auto .face .nose {
