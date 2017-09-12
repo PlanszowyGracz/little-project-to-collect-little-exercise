@@ -34,15 +34,15 @@ $color-hair:rgba(155, 76, 39, 1);
         width:200px;
          height: 80px;
         //border:1px solid black;
-        background-image: radial-gradient(20px 20px at 50% 50% ,$color-hair 99%, transparent 99%),
-        radial-gradient(20px 20px at 16% 60% ,$color-hair 98%, transparent 99%),
-        radial-gradient(20px 20px at 55% 46% ,$color-hair 99%, transparent 99%),
-        radial-gradient(27px 27px at 40% 41% ,$color-hair 99%, transparent 99%),
-        radial-gradient(19px 19px at 33% 46% ,$color-hair 99%, transparent 99%),
-        radial-gradient(24px 24px at 25% 46% ,$color-hair 99%, transparent 99%),
-        radial-gradient(25px 25px at 67% 43% ,$color-hair 99%, transparent 99%),
-        radial-gradient(24px 24px at 73% 48% ,$color-hair 99%, transparent 99%),
-        radial-gradient(20px 20px at 84% 60% ,$color-hair 99%, transparent 99%)
+        background-image: radial-gradient(circle 20px at 50% 50% ,$color-hair 99%, transparent 99%),
+        radial-gradient(circle 20px at 16% 60% ,$color-hair 98%, transparent 99%),
+        radial-gradient(circle 20px at 55% 46% ,$color-hair 99%, transparent 99%),
+        radial-gradient(circle 27px at 40% 41% ,$color-hair 99%, transparent 99%),
+        radial-gradient(circle 19px at 33% 46% ,$color-hair 99%, transparent 99%),
+        radial-gradient(circle 24px at 25% 46% ,$color-hair 99%, transparent 99%),
+        radial-gradient(circle 25px at 67% 43% ,$color-hair 99%, transparent 99%),
+        radial-gradient(circle 24px at 73% 48% ,$color-hair 99%, transparent 99%),
+        radial-gradient(circle 20px at 84% 60% ,$color-hair 99%, transparent 99%)
         ;
 
     }
@@ -59,8 +59,8 @@ $color-hair:rgba(155, 76, 39, 1);
        //eyebrows
          radial-gradient(ellipse 15px 2px at 45px 20%, rgba(201, 129, 74, 0.91) 99% , transparent  99% ), radial-gradient(15px 2px at 105px 20%, rgba(194, 129, 77, 0.91) 99%, transparent  99% )
           //smile
-        ,radial-gradient( 50px 50px at 50% 50% ,$color-face 99%, transparent 99%),
-        radial-gradient(40px 40px at 50% 60% ,#C01F1F 99%, transparent 99%)
+        ,radial-gradient( circle 50px at 50% 50% ,$color-face 99%, transparent 99%),
+        radial-gradient(circle 40px at 50% 60% ,#C01F1F 99%, transparent 99%)
          ;
 
         .nose{
