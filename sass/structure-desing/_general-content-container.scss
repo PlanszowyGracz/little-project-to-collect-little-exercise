@@ -9,177 +9,125 @@ $shift-side-menu:180px;
 $shift-container-vertical:$button-height-universal/2+2px;
 $aling-content:20px;
 
+.container {
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    padding-top: $shift-container-vertical;
+   
+    &:before {
+        @include background-triangle();
+    }
+}
 
+.small-nav {
+    display: inline-block;
+    position: absolute;
+    top: $shift-container-vertical+$aling-content;
+    left: $shift-side-menu-begin;
+    width: $shift-side-menu;
+    height: 60vh;
+    background-color: $color-secondary; 
+    //background-color:mix($color-secondary,mix($color-to-make-mix-2 ,$color-to-make-mix), 95% );
+    // background: linear-gradient(to bottom, $color-to-make-mix, $color-to-make-mix),  linear-gradient(to bottom, $color-to-make-mix-2, $color-to-make-mix-2) $color-secondary;
+    // background-size:  100% 10px, 100% 10px;
+    margin: 0px;
+    border-radius: 20px 0px 0px 20px;
+    border: $side-menu-border solid black;
+    text-align: center;
+    @include overflow-only-x();
+    
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
 
-.container{
-    
-        height: auto;  
-        position:relative;
-        overflow: hidden;
-        padding-top:$shift-container-vertical;
-        &:before{
-            @include background-triangle();
-        }
-    
-        .small-nav{
-            display:inline-block;
-            position:absolute;
-            top: $shift-container-vertical+$aling-content;
-            left:$shift-side-menu-begin;
-            width:$shift-side-menu;
-            height: 60vh;
-            background-color: $color-secondary;
-             //background-color:mix($color-secondary,mix($color-to-make-mix-2 ,$color-to-make-mix), 95% );
-           // background: linear-gradient(to bottom, $color-to-make-mix, $color-to-make-mix),  linear-gradient(to bottom, $color-to-make-mix-2, $color-to-make-mix-2) $color-secondary;
-           // background-size:  100% 10px, 100% 10px;
-             margin:0px;
-            border-radius:20px 0px 0px 20px;
-            border:$side-menu-border solid black;
-            text-align: center;
-            @include overflow-only-x();
-    
-            &::-webkit-scrollbar {
-                width: 8px;
-            }
-            
-            &::-webkit-scrollbar-thumb {
-                    background-color: black;
-                    border:1px solid white;
-                    width: 4px;
-                
-            }
-        
-            .plus{
-                width:$plus-size;
-                height:$plus-size;
-                background: linear-gradient(to left,transparent 40%,black 40%,black 60%,transparent 60%) no-repeat 2px 2px,linear-gradient(to bottom,transparent 40%,black 40%,black 60%,transparent 60%) no-repeat 2px 2px;
-                background-size: make-Smaller($plus-size , 5px) make-Smaller($plus-size , 5px),make-Smaller($plus-size , 5px) make-Smaller($plus-size , 5px);
-                display:none;
-            
-            
-            
-            }
-    
-            
-            .small-nav__list{
+    &::-webkit-scrollbar-thumb {
+        background-color: black;
+        border: 1px solid white;
+        width: 4px;
+    }
+
+    .plus {
+        width: $plus-size;
+        height: $plus-size;
+        background: linear-gradient(to left, transparent 40%, black 40%, black 60%, transparent 60%) no-repeat 2px 2px, linear-gradient(to bottom, transparent 40%, black 40%, black 60%, transparent 60%) no-repeat 2px 2px;
+        background-size: make-Smaller($plus-size, 5px) make-Smaller($plus-size, 5px), make-Smaller($plus-size, 5px) make-Smaller($plus-size, 5px);
+        display: none;
+    }
+    .small-nav__list {
+        text-decoration: none;
+        list-style-type: none;
+        display: inline-block;
+        .small-nav__list__el {
+            text-decoration: none;
+            .small-nav__list__el__link {
                 text-decoration: none;
-                list-style-type: none;
-                display:inline-block;
-            
-    
-    
-                    .small-nav__list__el{
-                    text-decoration: none;
-    
-    
-                        .small-nav__list__el__link{
-                        text-decoration: none;
-                        }
-                    }
-    
-    
-                    
-    
-    
-    
-    
             }
-    
-            @media all and(max-width:$small-screen){
-                
-                
-                    width:$plus-size-div;
-                    height:$plus-size-div;
-                    border-radius: 5px;
-                    left:$shift-side-menu-begin-small;
-                    top: $shift-container-vertical;
-                    z-index: 5;
-                    overflow: hidden;
-                    .plus{
-                        display:block;
-                    
-                        
-                    }
-                    .small-nav__list{
-                        display:none;
-                
-                    }
-    
-                    &:not(.no-hover):hover{
-                        width:96%;
-                        height:auto;
-                        @include overflow-only-x();
-                        
-                        .small-nav__list{
-                            display:block;
-                        }
-                        .plus{
-                            overflow-y: auto;
-                            overflow-x: hidden; 
-                        }
-                    }
-                    
-                
-                
-                
-            
-                }
         }
-    
-    
-    
-    
-    
-    
-        .general-content-container{
-    
-            display: inline-block;
-            position:relative;
-            left:$shift-side-menu + 20px;
-           
-            .general-content{
-    
-                position: relative;
-                width:85%;
-                min-height:72vh;
-               
-                background:linear-gradient(mix( $color-assistant, $color-to-make-mix ), mix( $color-assistant, $color-to-make-mix )) $color-primary  ;
-                margin:$aling-content 10px 20px 10px;
-                padding:10px;
-                text-align: center;
-    
-                .center{
-                    @include center_img(350px,450px);
-                    border: 1px solid silver;
-               
-                   
-                }
-            
-            }
-    
-            @media all and(max-width:$small-screen){
-                left:0px;
-        
-                .general-content{
-                    box-sizing: border-box;
-                    width:95%;
-                    margin:10px auto;
-                    height:85vh;
-                    
-    
-                    p{
-                        @include shift-top-content();
-                        
-                        height:2.5em;
-                        @include overflow-only-x();
-                    }
-                }
-            }
-        } 
-    
-    
-    
     }
     
-    
-    
+    @media all and(max-width:$small-screen) {
+        width: $plus-size-div;
+        height: $plus-size-div;
+        border-radius: 5px;
+        left: $shift-side-menu-begin-small;
+        top: $shift-container-vertical;
+        z-index: 5;
+        overflow: hidden;
+        .plus {
+            display: block;
+        }
+        .small-nav__list {
+            display: none;
+        }
+        &:not(.no-hover):hover {
+            width: 96%;
+            height: auto;
+            @include overflow-only-x();
+            .small-nav__list {
+                display: block;
+            }
+            .plus {
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+        }
+    }
+}
+
+.general-content-container {
+    display: inline-block;
+    position: relative;
+    left: $shift-side-menu + 20px;
+
+    .general-content {
+        position: relative;
+        width: 85%;
+        min-height: 72vh;
+        background: linear-gradient(mix( $color-assistant, $color-to-make-mix), mix( $color-assistant, $color-to-make-mix)) $color-primary;
+        margin: $aling-content 10px 20px 10px;
+        padding: 10px;
+        text-align: center;
+
+        .center {
+            @include center_img(350px, 450px);
+            //border: 1px solid silver;
+        }
+    }
+    @media all and(max-width:$small-screen) {
+        left: 0px;
+
+        .general-content {
+            box-sizing: border-box;
+            width: 95%;
+            margin: 10px auto;
+            height: 85vh;
+
+            p {
+                @include shift-top-content();
+                height: 2.5em;
+                @include overflow-only-x();
+            }
+        }
+    }
+}

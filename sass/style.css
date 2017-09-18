@@ -107,7 +107,7 @@ a {
   color: #CFCACA;
   position: relative;
   background: linear-gradient(to bottom, rgba(216, 110, 53, 0.96) 30%, rgba(222, 188, 124, 0.2) 30%), linear-gradient(to left, rgba(59, 53, 49, 0.4) 5%, rgba(244, 242, 240, 0.1) 5%) #CE9943;
-  background-size: 100% 10px,50px 100%;
+  background-size: 100% 10px, 50px 100%;
 }
 
 .main-nav .background-cross-text {
@@ -264,7 +264,7 @@ a {
   background-size: 30px 30px, 30px 30px;
 }
 
-.container .small-nav {
+.small-nav {
   display: inline-block;
   position: absolute;
   top: 47px;
@@ -280,17 +280,17 @@ a {
   overflow-x: hidden;
 }
 
-.container .small-nav::-webkit-scrollbar {
+.small-nav::-webkit-scrollbar {
   width: 8px;
 }
 
-.container .small-nav::-webkit-scrollbar-thumb {
+.small-nav::-webkit-scrollbar-thumb {
   background-color: black;
   border: 1px solid white;
   width: 4px;
 }
 
-.container .small-nav .plus {
+.small-nav .plus {
   width: 35px;
   height: 35px;
   background: linear-gradient(to left, transparent 40%, black 40%, black 60%, transparent 60%) no-repeat 2px 2px, linear-gradient(to bottom, transparent 40%, black 40%, black 60%, transparent 60%) no-repeat 2px 2px;
@@ -298,22 +298,22 @@ a {
   display: none;
 }
 
-.container .small-nav .small-nav__list {
+.small-nav .small-nav__list {
   text-decoration: none;
   list-style-type: none;
   display: inline-block;
 }
 
-.container .small-nav .small-nav__list .small-nav__list__el {
+.small-nav .small-nav__list .small-nav__list__el {
   text-decoration: none;
 }
 
-.container .small-nav .small-nav__list .small-nav__list__el .small-nav__list__el__link {
+.small-nav .small-nav__list .small-nav__list__el .small-nav__list__el__link {
   text-decoration: none;
 }
 
 @media all and (max-width: 800px) {
-  .container .small-nav {
+  .small-nav {
     width: 37px;
     height: 37px;
     border-radius: 5px;
@@ -322,34 +322,34 @@ a {
     z-index: 5;
     overflow: hidden;
   }
-  .container .small-nav .plus {
+  .small-nav .plus {
     display: block;
   }
-  .container .small-nav .small-nav__list {
+  .small-nav .small-nav__list {
     display: none;
   }
-  .container .small-nav:not(.no-hover):hover {
+  .small-nav:not(.no-hover):hover {
     width: 96%;
     height: auto;
     overflow-y: auto;
     overflow-x: hidden;
   }
-  .container .small-nav:not(.no-hover):hover .small-nav__list {
+  .small-nav:not(.no-hover):hover .small-nav__list {
     display: block;
   }
-  .container .small-nav:not(.no-hover):hover .plus {
+  .small-nav:not(.no-hover):hover .plus {
     overflow-y: auto;
     overflow-x: hidden;
   }
 }
 
-.container .general-content-container {
+.general-content-container {
   display: inline-block;
   position: relative;
   left: 200px;
 }
 
-.container .general-content-container .general-content {
+.general-content-container .general-content {
   position: relative;
   width: 85%;
   min-height: 72vh;
@@ -359,27 +359,26 @@ a {
   text-align: center;
 }
 
-.container .general-content-container .general-content .center {
+.general-content-container .general-content .center {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 350px;
   height: 450px;
-  border: 1px solid silver;
 }
 
 @media all and (max-width: 800px) {
-  .container .general-content-container {
+  .general-content-container {
     left: 0px;
   }
-  .container .general-content-container .general-content {
+  .general-content-container .general-content {
     box-sizing: border-box;
     width: 95%;
     margin: 10px auto;
     height: 85vh;
   }
-  .container .general-content-container .general-content p {
+  .general-content-container .general-content p {
     position: relative;
     top: 37px;
     height: 2.5em;
@@ -556,7 +555,7 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 150px;
+  width: 160px;
   height: 100px;
 }
  

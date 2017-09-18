@@ -26,6 +26,7 @@ $color-hair:rgba(155, 76, 39, 1);
 
 .pseudo-portret-auto{
     @include center_img(300px,300px);
+    
     .hair{
         position: absolute;
         top:0px;
@@ -52,20 +53,18 @@ $color-hair:rgba(155, 76, 39, 1);
         transform: translate(-50%,-110px);
         background-color: $color-face;
         border-radius: 10px 10px 80px 80px ;
-
         background-image:
         //eyes
          radial-gradient(30px 30px at 45px 30%, black 10% , #512B8D 10%, #2C0569 20%,white 20%, white 40% ,transparent  40% ), radial-gradient(30px 30px at 105px 30%, black 10%,#512B8D 10%, #2C0569 20%,white 20%, white 40%, transparent  40% ),
-       //eyebrows
+         //eyebrows
          radial-gradient(ellipse 15px 2px at 45px 20%, rgba(201, 129, 74, 0.91) 99% , transparent  99% ), radial-gradient(15px 2px at 105px 20%, rgba(194, 129, 77, 0.91) 99%, transparent  99% )
-          //smile
+        //smile
         ,radial-gradient( circle 50px at 50% 50% ,$color-face 99%, transparent 99%),
         radial-gradient(circle 40px at 50% 60% ,#C01F1F 99%, transparent 99%)
          ;
 
         .nose{
             @include center_img(10px,20px); 
-          
             background-image: linear-gradient(to bottom,mix($color-face,#8D581C,50%) 30%,
             mix($color-face,#8D581C,50%));
             border-radius: 20px 20px 40px 40px;
