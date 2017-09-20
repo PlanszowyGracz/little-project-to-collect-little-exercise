@@ -1,8 +1,75 @@
 @import "../global";
+
+@mixin background-Clock(){
+    background-color: #DAD2D0;
+    width:180px;
+    height:130px;
+    margin:10px auto; 
+    overflow: hidden;
+}
 .clock-binary-hand{
     .main-clock{
         background-color: silver;
-        @include center-img(160px,100px);
+        @include center-img(200px,150px);
+
+        .clock-lights{
+            display:none;
+            @include background-Clock();
+
+            .minutes-div,.hours-div{
+                display:flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                align-items: center;
+                height:49%;
+                width:60%;
+                margin:0 auto;
+                
+
+            }
+            .minutes-div >div, .hours-div >div {
+                width:5px;
+                height:5px;
+                background-color: black;
+
+            }
+
+            .timeName{
+            padding-right: 10px;
+            position: relative;
+            color:white;
+            z-index: 2;
+           
+                
+            }
+             #hour0{
+                 position: relative;
+                 &::after{
+                    content:"";
+                    display:block;
+                    width:200px;
+                    height:300px;
+                    position: absolute;
+                    left:-210px;
+                    top:-150px;
+                    background-color: rgba(78, 66, 66, 0.81);
+                    z-index: 1;
+                    
+                }
+             }
+            
+        }
     }
+
+.binary-text{
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    line-height: 130px;
+    @include background-Clock();
+    display:block;
+   
+}
+
 
 }

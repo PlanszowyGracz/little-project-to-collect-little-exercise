@@ -3,11 +3,27 @@
 	document.addEventListener("DOMContentLoaded",function(){
 		let timeshow=document.getElementById("time");
 		let clock = document.getElementsByClassName("main-clock")[0];
+		let clockLights = document.getElementsByClassName("clock-lights")[0];
+		let span=document.createElement("span");
 		let textNode=document.createTextNode(getTime().binary);
-		clock.appendChild(textNode);
+		span.classList.add("binary-text");
+		clock.appendChild(span);
+		span.appendChild(textNode);
+		let clockText=true;
 		console.log(`Wynik testów ${testConversion()}`);
 		
-		
+		clock.addEventListener("click", function () {
+			if (clockText) {
+				clock.removeChild(span); clockText = false;
+				clockLights.style.display="block";
+				
+			}
+			else {
+				clock.appendChild(span);
+				clockLights.style.display="none";
+				clockText=true;
+			}
+		});
 
 		let timeChangeText=function(time){
 			console.log(`time: ${time}`); 

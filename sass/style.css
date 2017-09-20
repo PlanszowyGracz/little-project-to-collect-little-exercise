@@ -264,7 +264,7 @@ a {
   background-size: 30px 30px, 30px 30px;
 }
 
-.small-nav {
+.side-menu {
   display: inline-block;
   position: absolute;
   top: 47px;
@@ -280,17 +280,17 @@ a {
   overflow-x: hidden;
 }
 
-.small-nav::-webkit-scrollbar {
+.side-menu::-webkit-scrollbar {
   width: 8px;
 }
 
-.small-nav::-webkit-scrollbar-thumb {
+.side-menu::-webkit-scrollbar-thumb {
   background-color: black;
   border: 1px solid white;
   width: 4px;
 }
 
-.small-nav .plus {
+.side-menu .plus {
   width: 35px;
   height: 35px;
   background: linear-gradient(to left, transparent 40%, black 40%, black 60%, transparent 60%) no-repeat 2px 2px, linear-gradient(to bottom, transparent 40%, black 40%, black 60%, transparent 60%) no-repeat 2px 2px;
@@ -298,22 +298,22 @@ a {
   display: none;
 }
 
-.small-nav .small-nav__list {
+.side-menu .side-menu__list {
   text-decoration: none;
   list-style-type: none;
   display: inline-block;
 }
 
-.small-nav .small-nav__list .small-nav__list__el {
+.side-menu .side-menu__list .side-menu__list__el {
   text-decoration: none;
 }
 
-.small-nav .small-nav__list .small-nav__list__el .small-nav__list__el__link {
+.side-menu .side-menu__list .side-menu__list__el .side-menu__list__el__link {
   text-decoration: none;
 }
 
 @media all and (max-width: 800px) {
-  .small-nav {
+  .side-menu {
     width: 37px;
     height: 37px;
     border-radius: 5px;
@@ -322,22 +322,22 @@ a {
     z-index: 5;
     overflow: hidden;
   }
-  .small-nav .plus {
+  .side-menu .plus {
     display: block;
   }
-  .small-nav .small-nav__list {
+  .side-menu .side-menu__list {
     display: none;
   }
-  .small-nav:not(.no-hover):hover {
+  .side-menu:not(.no-hover):hover {
     width: 96%;
     height: auto;
     overflow-y: auto;
     overflow-x: hidden;
   }
-  .small-nav:not(.no-hover):hover .small-nav__list {
+  .side-menu:not(.no-hover):hover .side-menu__list {
     display: block;
   }
-  .small-nav:not(.no-hover):hover .plus {
+  .side-menu:not(.no-hover):hover .plus {
     overflow-y: auto;
     overflow-x: hidden;
   }
@@ -555,8 +555,69 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 160px;
-  height: 100px;
+  width: 200px;
+  height: 150px;
+}
+
+.clock-binary-hand .main-clock .clock-lights {
+  display: none;
+  background-color: #DAD2D0;
+  width: 180px;
+  height: 130px;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.clock-binary-hand .main-clock .clock-lights .minutes-div, .clock-binary-hand .main-clock .clock-lights .hours-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 49%;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.clock-binary-hand .main-clock .clock-lights .minutes-div > div, .clock-binary-hand .main-clock .clock-lights .hours-div > div {
+  width: 5px;
+  height: 5px;
+  background-color: black;
+}
+
+.clock-binary-hand .main-clock .clock-lights .timeName {
+  padding-right: 10px;
+  position: relative;
+  color: white;
+  z-index: 2;
+}
+
+.clock-binary-hand .main-clock .clock-lights #hour0 {
+  position: relative;
+}
+
+.clock-binary-hand .main-clock .clock-lights #hour0::after {
+  content: "";
+  display: block;
+  width: 200px;
+  height: 300px;
+  position: absolute;
+  left: -210px;
+  top: -150px;
+  background-color: rgba(78, 66, 66, 0.81);
+  z-index: 1;
+}
+
+.clock-binary-hand .binary-text {
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  line-height: 130px;
+  background-color: #DAD2D0;
+  width: 180px;
+  height: 130px;
+  margin: 10px auto;
+  overflow: hidden;
+  display: block;
 }
  
 

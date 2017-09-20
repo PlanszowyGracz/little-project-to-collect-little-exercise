@@ -20,7 +20,7 @@ $aling-content:20px;
     }
 }
 
-.small-nav {
+.side-menu {
     display: inline-block;
     position: absolute;
     top: $shift-container-vertical+$aling-content;
@@ -54,13 +54,13 @@ $aling-content:20px;
         background-size: make-Smaller($plus-size, 5px) make-Smaller($plus-size, 5px), make-Smaller($plus-size, 5px) make-Smaller($plus-size, 5px);
         display: none;
     }
-    .small-nav__list {
+    .side-menu__list {
         text-decoration: none;
         list-style-type: none;
         display: inline-block;
-        .small-nav__list__el {
+        .side-menu__list__el {
             text-decoration: none;
-            .small-nav__list__el__link {
+            .side-menu__list__el__link {
                 text-decoration: none;
             }
         }
@@ -77,14 +77,14 @@ $aling-content:20px;
         .plus {
             display: block;
         }
-        .small-nav__list {
+        .side-menu__list {
             display: none;
         }
         &:not(.no-hover):hover {
             width: 96%;
             height: auto;
             @include overflow-only-x();
-            .small-nav__list {
+            .side-menu__list {
                 display: block;
             }
             .plus {
