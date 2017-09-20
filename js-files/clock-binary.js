@@ -7,6 +7,7 @@
 
 		let textClock = document.createElement("div");
 		let time=getTime();
+		
 		let textNode = addTextClockHtml(clock, textClock,time.binaryH+time.binaryM);
 		let textNode2 = addTextClockHtml(clock, textClock,time.binaryS);
 		
@@ -15,7 +16,7 @@
 
 		let clockText=true;
 		console.log(`Wynik testów ${testConversion()}`);
-		
+		timeshow.firstChild.nodeValue=time.normal;
 		clock.addEventListener("click", function () {
 			if (clockText) {
 				clock.removeChild(textClock);
