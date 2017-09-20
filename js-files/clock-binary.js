@@ -61,7 +61,8 @@
 			timeChangeText(time.normal);
 			timeChangeClockText(time);
 			timeChangeLightClock(time);
-		})();
+		});
+		setTime();
 
 		let interval=window.setInterval(setTime, 1000);
 		console.log(interval);
