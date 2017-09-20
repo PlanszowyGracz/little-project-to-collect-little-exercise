@@ -2,6 +2,8 @@
 
 $color-clock-primary:rgba(78, 66, 66, 0.81);
 $color-strap:#7E2929;
+$light-color:#D82323;
+$light-color-border:white;
 @mixin background-Clock(){
     background-color: #DAD2D0;
     width:180px;
@@ -71,7 +73,7 @@ $color-strap:#7E2929;
         }
 
         .clock-lights{
-            display:none;
+            display:block;
             @include background-Clock();
 
             .minutes-div,.hours-div{
@@ -81,17 +83,35 @@ $color-strap:#7E2929;
                 justify-content: space-around;
                 align-items: center;
                 height:49%;
-                width:60%;
+                width:80%;
                 margin:0 auto;
                 
 
             }
             .minutes-div >div, .hours-div >div {
-                width:5px;
-                height:5px;
-                background-color: black;
+                width:6px;
+                height:6px;
+             
+            }
+             .hours-div >div{
+                width:9px;
+                height:9px; 
 
             }
+          
+
+            .closed{
+                background-color: black;
+              
+              
+            }
+
+            .open{
+                background-color:$light-color;
+                box-shadow: 2px 2px 0 $light-color-border, -2px -2px  0 $light-color-border,-2px 2px 0 $light-color-border, 2px -2px 0 $light-color-border;
+              
+            }
+            
 
             .timeName{
             padding-right: 10px;
@@ -113,6 +133,7 @@ $color-strap:#7E2929;
                     top:-150px;
                     background-color: $color-clock-primary;
                     z-index: 1;
+                   
                     
                 }
              }

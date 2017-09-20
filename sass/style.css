@@ -614,7 +614,7 @@ a {
 }
 
 .clock-binary-hand .main-clock .clock-lights {
-  display: none;
+  display: block;
   background-color: #DAD2D0;
   width: 180px;
   height: 130px;
@@ -630,14 +630,27 @@ a {
   justify-content: space-around;
   align-items: center;
   height: 49%;
-  width: 60%;
+  width: 80%;
   margin: 0 auto;
 }
 
 .clock-binary-hand .main-clock .clock-lights .minutes-div > div, .clock-binary-hand .main-clock .clock-lights .hours-div > div {
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
+}
+
+.clock-binary-hand .main-clock .clock-lights .hours-div > div {
+  width: 9px;
+  height: 9px;
+}
+
+.clock-binary-hand .main-clock .clock-lights .closed {
   background-color: black;
+}
+
+.clock-binary-hand .main-clock .clock-lights .open {
+  background-color: #D82323;
+  box-shadow: 2px 2px 0 white, -2px -2px 0 white, -2px 2px 0 white, 2px -2px 0 white;
 }
 
 .clock-binary-hand .main-clock .clock-lights .timeName {
