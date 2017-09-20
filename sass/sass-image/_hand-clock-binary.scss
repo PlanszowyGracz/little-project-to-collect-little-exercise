@@ -1,166 +1,153 @@
 @import "../global";
-
 $color-clock-primary:rgba(78, 66, 66, 0.81);
 $color-strap:#7E2929;
 $light-color:#D82323;
 $light-color-border:white;
-@mixin background-Clock(){
+@mixin background-Clock() {
     background-color: #DAD2D0;
-    width:180px;
-    height:130px;
-    margin:10px auto; 
+    width: 180px;
+    height: 130px;
+    margin: 10px auto;
     border-radius: 10px;
     overflow: hidden;
 }
-.clock-binary-hand{
-    
-    .main-clock{
+
+.clock-binary-hand {
+
+    .main-clock {
         background-color: silver;
         border-radius: 10px;
-        
-        @include center-img(200px,150px);
+        @include center-img(200px, 150px);
 
-        .strap-left, .strap-right{
-            content:"";
-            display:block;
-            width:400px;
-            height:50px;
-           
+        .strap-left,
+        .strap-right {
+            content: "";
+            display: block;
+            width: 400px;
+            height: 50px;
             background-color: $color-strap;
         }
-        .strap-left{
+
+        .strap-left {
             position: absolute;
-            top:50px;
-            left:-400px;
+            top: 50px;
+            left: -400px;
             border-bottom-left-radius: 40px;
             border-top-left-radius: 40px;
-          
-
-            background: radial-gradient(  black 5%, transparent 5% )  $color-strap ;
+            background: radial-gradient( black 5%, transparent 5%) $color-strap;
             background-repeat: repeat-x;
-            background-size:100px 100px;
+            background-size: 100px 100px;
             background-position: 30px 50%;
         }
-        .strap-right{
+
+        .strap-right {
             position: absolute;
-            top:50px;
-            right:-400px; 
-            border-bottom-right-radius: 40px ;
-            border-top-right-radius: 40px ;
-            &::before{
-                content:"";
+            top: 50px;
+            right: -400px;
+            border-bottom-right-radius: 40px;
+            border-top-right-radius: 40px;
+
+            &::before {
+                content: "";
                 position: absolute;
-                top:23px;
-                right:-10px;
-                display:block;
-                width:40px;
-                height:4px; 
-                background-color:silver; 
+                top: 23px;
+                right: -10px;
+                display: block;
+                width: 40px;
+                height: 4px;
+                background-color: silver;
             }
-            &::after{
-                content:"";
+
+            &::after {
+                content: "";
                 position: absolute;
-                top:-4px;
-                right:-20px;
-                display:block;
-                width:60px;
-                height:50px; 
-                border: 2px  solid silver; 
+                top: -4px;
+                right: -20px;
+                display: block;
+                width: 60px;
+                height: 50px;
+                border: 2px solid silver;
                 border-width: 4px 8px 4px 0px;
                 border-radius: 0px 10px 10px 0px;
-
             }
         }
 
-        .clock-lights{
-            display:block;
+        .clock-lights {
+            display: block;
             @include background-Clock();
 
-            .minutes-div,.hours-div{
-                display:flex;
+
+            .minutes-div,
+            .hours-div {
+                display: flex;
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: space-around;
                 align-items: center;
-                height:49%;
-                width:80%;
-                margin:0 auto;
-                
-
+                height: 49%;
+                width: 80%;
+                margin: 0 auto;
             }
-            .minutes-div >div, .hours-div >div {
-                width:6px;
-                height:6px;
-             
-            }
-             .hours-div >div{
-                width:9px;
-                height:9px; 
 
+            .minutes-div>div,
+            .hours-div>div {
+                width: 6px;
+                height: 6px;
             }
-          
 
-            .closed{
+            .hours-div>div {
+                width: 9px;
+                height: 9px;
+            }
+
+            .closed {
                 background-color: black;
-              
-              
             }
 
-            .open{
-                background-color:$light-color;
-                box-shadow: 2px 2px 0 $light-color-border, -2px -2px  0 $light-color-border,-2px 2px 0 $light-color-border, 2px -2px 0 $light-color-border;
-              
+            .open {
+                background-color: $light-color;
+                box-shadow: 2px 2px 0 $light-color-border, -2px -2px 0 $light-color-border, -2px 2px 0 $light-color-border, 2px -2px 0 $light-color-border;
             }
-            
 
-            .timeName{
-            padding-right: 10px;
-            position: relative;
-            color:white;
-            z-index: 2;
-           
-                
+            .timeName {
+                padding-right: 10px;
+                position: relative;
+                color: white;
+                z-index: 2;
             }
-             #hour0{
-                 position: relative;
-                 &::after{
-                    content:"";
-                    display:block;
-                    width:200px;
-                    height:300px;
+
+            #hour0 {
+                position: relative;
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 200px;
+                    height: 300px;
                     position: absolute;
-                    left:-210px;
-                    top:-150px;
+                    left: -210px;
+                    top: -150px;
                     background-color: $color-clock-primary;
                     z-index: 1;
-                   
-                    
                 }
-             }
-            
+            }
         }
     }
+    .binary-text-container {
 
-.binary-text-container{
- 
-    @include background-Clock();
-   .half-clock{
-       width:100%;
-       height:49%;
-        .binary-text{
-            background-color: rgba(170, 146, 146, 0.47);
-            text-align: center;
-            font-family: 'Oswald', sans-serif;
-            line-height: 74px;
-            padding:5px;
-            margin:0;
-             
-    
+        @include background-Clock();
+
+        .half-clock {
+            width: 100%;
+            height: 49%;
+            .binary-text {
+                
+                background-color: rgba(170, 146, 146, 0.47);
+                text-align: center;
+                font-family: 'Oswald', sans-serif;
+                line-height: 74px;
+                padding: 5px;
+                margin: 0;
+            }
         }
-   }
-   
-   
-}
-
-
+    }
 }
