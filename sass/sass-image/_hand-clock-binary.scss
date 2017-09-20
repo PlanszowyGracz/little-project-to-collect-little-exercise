@@ -1,5 +1,7 @@
 @import "../global";
 
+$color-clock-primary:rgba(78, 66, 66, 0.81);
+
 @mixin background-Clock(){
     background-color: #DAD2D0;
     width:180px;
@@ -53,7 +55,7 @@
                     position: absolute;
                     left:-210px;
                     top:-150px;
-                    background-color: rgba(78, 66, 66, 0.81);
+                    background-color: $color-clock-primary;
                     z-index: 1;
                     
                 }
@@ -62,12 +64,18 @@
         }
     }
 
-.binary-text{
-    text-align: center;
-    font-family: 'Oswald', sans-serif;
-    line-height: 130px;
+.binary-text-container{
+ 
     @include background-Clock();
-    display:block;
+    
+   .binary-text{
+     background-color: rgba(170, 146, 146, 0.47);
+     text-align: center;
+     font-family: 'Oswald', sans-serif;
+     line-height: 130px;
+     padding:10px;
+
+   }
    
 }
 

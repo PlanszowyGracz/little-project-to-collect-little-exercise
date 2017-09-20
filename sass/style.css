@@ -608,16 +608,20 @@ a {
   z-index: 1;
 }
 
-.clock-binary-hand .binary-text {
-  text-align: center;
-  font-family: 'Oswald', sans-serif;
-  line-height: 130px;
+.clock-binary-hand .binary-text-container {
   background-color: #DAD2D0;
   width: 180px;
   height: 130px;
   margin: 10px auto;
   overflow: hidden;
-  display: block;
+}
+
+.clock-binary-hand .binary-text-container .binary-text {
+  background-color: rgba(170, 146, 146, 0.47);
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  line-height: 130px;
+  padding: 10px;
 }
  
 

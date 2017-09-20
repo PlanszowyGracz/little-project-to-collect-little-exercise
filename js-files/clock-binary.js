@@ -4,22 +4,23 @@
 		let timeshow=document.getElementById("time");
 		let clock = document.getElementsByClassName("main-clock")[0];
 		let clockLights = document.getElementsByClassName("clock-lights")[0];
-		let span=document.createElement("span");
-		let textNode=document.createTextNode(getTime().binary);
-		span.classList.add("binary-text");
-		clock.appendChild(span);
-		span.appendChild(textNode);
+
+		let textClock = document.createElement("div");
+		let textNode = addTextClockHtml(clock, textClock);
+
+
+
 		let clockText=true;
 		console.log(`Wynik testów ${testConversion()}`);
 		
 		clock.addEventListener("click", function () {
 			if (clockText) {
-				clock.removeChild(span); clockText = false;
+				clock.removeChild(textClock); clockText = false;
 				clockLights.style.display="block";
 				
 			}
 			else {
-				clock.appendChild(span);
+				clock.appendChild(textClock);
 				clockLights.style.display="none";
 				clockText=true;
 			}
@@ -44,7 +45,16 @@
 		
 	});
 
-	
+	function addTextClockHtml(clock, div){
+		let span=document.createElement("span");
+		let textNode=document.createTextNode(getTime().binary);
+		div.classList.add("binary-text-container");
+		span.classList.add("binary-text");
+		clock.appendChild(div);
+		div.appendChild(span);
+		span.appendChild(textNode);
+		return textNode;
+	}
 
 	function getTime(){
 		let now = new Date();
