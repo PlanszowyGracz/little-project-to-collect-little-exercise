@@ -6,16 +6,20 @@
 		let clockLights = document.getElementsByClassName("clock-lights")[0];
 
 		let textClock = document.createElement("div");
-		let textNode = addTextClockHtml(clock, textClock);
+		let time=getTime();
+		let textNode = addTextClockHtml(clock, textClock,time.binaryH+time.binaryM);
+		let textNode2 = addTextClockHtml(clock, textClock,time.binaryS);
+		
 
-
+		console.log("null " + addNullOnBeginning("444"));
 
 		let clockText=true;
 		console.log(`Wynik testów ${testConversion()}`);
 		
 		clock.addEventListener("click", function () {
 			if (clockText) {
-				clock.removeChild(textClock); clockText = false;
+				clock.removeChild(textClock);
+				clockText = false;
 				clockLights.style.display="block";
 				
 			}
@@ -27,17 +31,19 @@
 		});
 
 		let timeChangeText=function(time){
-			console.log(`time: ${time}`); 
+			//console.log(`time: ${time}`); 
 			timeshow.firstChild.nodeValue=time;
 		};
-		let timeChangeClock=function(time){
-			console.log(`time: ${time}`); 
-			textNode.nodeValue=time;
+		let timeChangeClockText=function(time){
+			//console.log(`time: ${time}`); 
+			
+			textNode2.nodeValue=time.binaryS;
+			textNode.nodeValue=time.binaryH+time.binaryM;
 		};
 		let interval=window.setInterval(()=>{
 			let time=getTime();
 			timeChangeText(time.normal);
-			timeChangeClock(time.binary); }, 1000);
+			timeChangeClockText(time); }, 1000);
 		console.log(interval);
 
 	
@@ -45,12 +51,15 @@
 		
 	});
 
-	function addTextClockHtml(clock, div){
+	function addTextClockHtml(clock, container, time){
+		let div=document.createElement("div");
 		let span=document.createElement("span");
-		let textNode=document.createTextNode(getTime().binary);
-		div.classList.add("binary-text-container");
+		let textNode=document.createTextNode(time);
+		container.classList.add("binary-text-container");
 		span.classList.add("binary-text");
-		clock.appendChild(div);
+		div.classList.add("half-clock");
+		clock.appendChild(container);
+		container.appendChild(div);
 		div.appendChild(span);
 		span.appendChild(textNode);
 		return textNode;
@@ -62,10 +71,12 @@
 		let m = now.getMinutes();
 		let s = now.getSeconds();
 		let normal=`${h} : ${m} : ${s}`;
-		let binary=`${converseToBinary(h)} \n : ${converseToBinary(m)} \n : ${converseToBinary(s)}`;
+		//let binary=` H: ${addNullOnBeginning(converseToBinary(h))} , M: ${addNullOnBeginning(converseToBinary(m))} , S: ${addNullOnBeginning(converseToBinary(s))}`;
 		return {
 			"normal": normal,
-			"binary": binary
+			"binaryH": ` H: ${addNullOnBeginning(converseToBinary(h)).slice(1)} `,
+			"binaryM": ` M: ${addNullOnBeginning(converseToBinary(m))} `,
+			"binaryS": ` S: ${addNullOnBeginning(converseToBinary(s))} `
 		};
 	}
 
@@ -78,13 +89,24 @@
 			number=Math.floor(number/2);
 			
 		}
-		if(arr.length===0) arr.push(0);
+		if(arr.length===0) {arr.push(0);}
 		
-		return arr.reverse().join("");
+		
+		
+		return  arr.reverse().join("");
 
 
 	}
+
+	function addNullOnBeginning(text){
+		let repeat = 0;
+		if (7 -text.length  >= 0) { repeat = 7 -text.length ; }
+		console.log(repeat);
+		return ("0".repeat(repeat)).concat(text);
+	}
 	
+
+
 	function testConversion() {
 		let table = [
 			createTest(0, 0),

@@ -1,18 +1,74 @@
 @import "../global";
 
 $color-clock-primary:rgba(78, 66, 66, 0.81);
-
+$color-strap:#7E2929;
 @mixin background-Clock(){
     background-color: #DAD2D0;
     width:180px;
     height:130px;
     margin:10px auto; 
+    border-radius: 10px;
     overflow: hidden;
 }
 .clock-binary-hand{
+    
     .main-clock{
         background-color: silver;
+        border-radius: 10px;
+        
         @include center-img(200px,150px);
+
+        .strap-left, .strap-right{
+            content:"";
+            display:block;
+            width:400px;
+            height:50px;
+           
+            background-color: $color-strap;
+        }
+        .strap-left{
+            position: absolute;
+            top:50px;
+            left:-400px;
+            border-bottom-left-radius: 40px;
+            border-top-left-radius: 40px;
+          
+
+            background: radial-gradient(  black 5%, transparent 5% )  $color-strap ;
+            background-repeat: repeat-x;
+            background-size:100px 100px;
+            background-position: 30px 50%;
+        }
+        .strap-right{
+            position: absolute;
+            top:50px;
+            right:-400px; 
+            border-bottom-right-radius: 40px ;
+            border-top-right-radius: 40px ;
+            &::before{
+                content:"";
+                position: absolute;
+                top:23px;
+                right:-10px;
+                display:block;
+                width:40px;
+                height:4px; 
+                background-color:silver; 
+            }
+            &::after{
+                content:"";
+                position: absolute;
+                top:-4px;
+                right:-20px;
+                display:block;
+                width:60px;
+                height:50px; 
+                border: 2px  solid silver; 
+                border-width: 4px 8px 4px 0px;
+                border-radius: 0px 10px 10px 0px;
+
+            }
+        }
 
         .clock-lights{
             display:none;
@@ -67,15 +123,21 @@ $color-clock-primary:rgba(78, 66, 66, 0.81);
 .binary-text-container{
  
     @include background-Clock();
+   .half-clock{
+       width:100%;
+       height:49%;
+        .binary-text{
+            background-color: rgba(170, 146, 146, 0.47);
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            line-height: 74px;
+            padding:5px;
+            margin:0;
+             
     
-   .binary-text{
-     background-color: rgba(170, 146, 146, 0.47);
-     text-align: center;
-     font-family: 'Oswald', sans-serif;
-     line-height: 130px;
-     padding:10px;
-
+        }
    }
+   
    
 }
 

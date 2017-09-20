@@ -357,6 +357,7 @@ a {
   margin: 20px 10px 20px 10px;
   padding: 10px;
   text-align: center;
+  overflow: hidden;
 }
 
 .general-content-container .general-content .center {
@@ -551,6 +552,7 @@ a {
 
 .clock-binary-hand .main-clock {
   background-color: silver;
+  border-radius: 10px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -559,12 +561,65 @@ a {
   height: 150px;
 }
 
+.clock-binary-hand .main-clock .strap-left, .clock-binary-hand .main-clock .strap-right {
+  content: "";
+  display: block;
+  width: 400px;
+  height: 50px;
+  background-color: #7E2929;
+}
+
+.clock-binary-hand .main-clock .strap-left {
+  position: absolute;
+  top: 50px;
+  left: -400px;
+  border-bottom-left-radius: 40px;
+  border-top-left-radius: 40px;
+  background: radial-gradient(black 5%, transparent 5%) #7E2929;
+  background-repeat: repeat-x;
+  background-size: 100px 100px;
+  background-position: 30px 50%;
+}
+
+.clock-binary-hand .main-clock .strap-right {
+  position: absolute;
+  top: 50px;
+  right: -400px;
+  border-bottom-right-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
+.clock-binary-hand .main-clock .strap-right::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  right: -10px;
+  display: block;
+  width: 40px;
+  height: 4px;
+  background-color: silver;
+}
+
+.clock-binary-hand .main-clock .strap-right::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  right: -20px;
+  display: block;
+  width: 60px;
+  height: 50px;
+  border: 2px  solid silver;
+  border-width: 4px 8px 4px 0px;
+  border-radius: 0px 10px 10px 0px;
+}
+
 .clock-binary-hand .main-clock .clock-lights {
   display: none;
   background-color: #DAD2D0;
   width: 180px;
   height: 130px;
   margin: 10px auto;
+  border-radius: 10px;
   overflow: hidden;
 }
 
@@ -613,15 +668,22 @@ a {
   width: 180px;
   height: 130px;
   margin: 10px auto;
+  border-radius: 10px;
   overflow: hidden;
 }
 
-.clock-binary-hand .binary-text-container .binary-text {
+.clock-binary-hand .binary-text-container .half-clock {
+  width: 100%;
+  height: 49%;
+}
+
+.clock-binary-hand .binary-text-container .half-clock .binary-text {
   background-color: rgba(170, 146, 146, 0.47);
   text-align: center;
   font-family: 'Oswald', sans-serif;
-  line-height: 130px;
-  padding: 10px;
+  line-height: 74px;
+  padding: 5px;
+  margin: 0;
 }
  
 

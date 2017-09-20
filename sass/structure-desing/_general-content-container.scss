@@ -108,9 +108,11 @@ $aling-content:20px;
         margin: $aling-content 10px 20px 10px;
         padding: 10px;
         text-align: center;
+        overflow: hidden;
 
         .center {
             @include center_img(350px, 450px);
+            
             //border: 1px solid silver;
         }
     }
