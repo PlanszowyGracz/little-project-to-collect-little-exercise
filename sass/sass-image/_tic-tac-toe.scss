@@ -1,0 +1,68 @@
+@import "../global";
+.center{
+   
+}
+.container-tic-tac-toe {
+   
+   
+    
+    button {
+        background-color: #F06A53;
+        border-radius: 10px;
+        padding: 5px;
+        width: 180px;
+        margin: 10px;
+        border-top: 9px solid #00FF15;
+        border-right: 6px solid #C7C73B;
+        border-bottom: 6px solid #E09A22;
+        border-left: 6px solid #AC3972;
+        font-family: 'VT323', monospace;
+        font-size: 1.5em;
+    }
+    .pseudo-screen {
+        width: 280px;
+        height: 400px;
+        text-align: center;
+        padding: 10px 10px;
+        margin: 10px auto;
+        background-color: #279791;
+        border-radius: 10px;
+    }
+    #menu {
+        display: block;
+        div {
+            width: 200px;
+            margin: 10px auto;
+        }
+    }
+    #game-container {
+        display: none;
+        .row {
+            display: block;
+            padding: 0;
+            margin: 10px;
+            div[id^="cell"] {
+                display: inline-block;
+                vertical-align: top;
+                width: 50px;
+                height: 50px;
+                margin: 0 10px;
+                padding: 0px;
+                background-color: #0F739E;
+                border: 2px solid #590779;
+                color: white;
+                text-align: center;
+                line-height: 50px; // box-shadow:inset 0px -5px 0px red;
+            }
+            .cross {
+                background: linear-gradient(45deg, transparent 45%, white 45%, white 55%, transparent 55%), linear-gradient(135deg, transparent 45%, white 45%, white 55%, transparent 55%) #0F739E;
+                background-position: 5px 5px;
+                background-size: 36px 36px;
+                background-repeat: no-repeat;
+            }
+            .circle {
+                background: radial-gradient(circle 18px at 23px 23px, transparent 80%, white 80%, white 99%, transparent 99%) #0F739E;
+            }
+        }
+    }
+}

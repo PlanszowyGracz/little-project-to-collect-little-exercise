@@ -99,6 +99,9 @@ $aling-content:20px;
     display: inline-block;
     position: relative;
     left: $shift-side-menu + 20px;
+    width:100%;
+    padding-right:40px;
+    
 
     .general-content {
         position: relative;
@@ -118,6 +121,7 @@ $aling-content:20px;
     }
     @media all and(max-width:$small-screen) {
         left: 0px;
+        padding-right:0px;
 
         .general-content {
             box-sizing: border-box;
