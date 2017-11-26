@@ -1,1 +1,1 @@
-# little-project-with-sass
+# little-project-to-collect-little-exercise
